@@ -1,0 +1,6 @@
+model_name: 'TripletNet'
+model_params:
+  base: 'efficientnet-b0'
+  pretrained: True
+  multi_gpus: True
+

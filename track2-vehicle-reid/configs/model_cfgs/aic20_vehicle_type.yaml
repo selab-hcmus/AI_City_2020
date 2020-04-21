@@ -1,0 +1,6 @@
+model_name: 'ImageClassifier'
+model_params:
+  base: 'resnet101'
+  n_classes: 8
+  pretrained: True
+  retrain_base: True

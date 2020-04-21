@@ -1,0 +1,5 @@
+model_name: 'TripletNet'
+model_params:
+  base: 'densenet161'
+  pretrained: True
+

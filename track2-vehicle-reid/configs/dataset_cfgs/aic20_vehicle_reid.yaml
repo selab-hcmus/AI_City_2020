@@ -1,0 +1,24 @@
+dataset_name: 'AIC20_VEHI_REID'
+dataset_params:
+    data_root: '../aic20_data/origin/'
+    spldata_dir: 
+        train_val:
+            train:      'image_train'
+            gallery:    'image_train'
+            query:      'image_train'
+            h_gallery:  'image_test'
+            h_query:    'image_query'
+        test:
+            gallery:  'image_test'
+            query:    'image_query'
+    lbl_fname: '../aic20_data/origin/train_label.xml'
+    datalst_pth:
+        train_val:
+            train:      './dataset_splits/aic20_vehicle_reid/reid_train.csv'
+            gallery:    './dataset_splits/aic20_vehicle_reid/reid_gallery_easy.csv'
+            query:      './dataset_splits/aic20_vehicle_reid/reid_query_easy.csv'
+            h_gallery:  './dataset_splits/aic20_vehicle_reid/reid_gallery_gt.csv'
+            h_query:    './dataset_splits/aic20_vehicle_reid/reid_query_gt.csv'
+        test:
+            gallery:    './dataset_splits/aic20_vehicle_reid/reid_test.csv'
+            query:      './dataset_splits/aic20_vehicle_reid/reid_query.csv'

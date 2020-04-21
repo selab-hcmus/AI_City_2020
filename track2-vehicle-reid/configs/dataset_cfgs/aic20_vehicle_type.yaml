@@ -1,0 +1,14 @@
+dataset_name: 'AIC20_VEHI_TYPE'
+dataset_params:
+    data_root: '../aic20_data/origin/'
+    spldata_dir: 
+        train: 'image_train'
+        val:   'image_train'
+        test:  'image_test'
+    lbl_fname: '../aic20_data/attributes_lbls/train_vehicle_type.csv'
+    datalst_pth:
+        train: './dataset_splits/aic20_vehicle_type/train.lst'
+        val:   './dataset_splits/aic20_vehicle_type/val.lst'
+        test:  './dataset_splits/aic20_vehicle_type/test.lst'
+
+# TODO: change the val and test datalst
