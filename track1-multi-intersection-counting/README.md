@@ -29,5 +29,9 @@ cd AIC20/car_counter
 python counter.py
 ```
 
+### Acknowledgement
+
+Source code for tracking car is built based on iou tracking of [High-Speed Tracking-by-Detection Without Using Image Information](https://github.com/bochinski/iou-tracker)
+
 
 
