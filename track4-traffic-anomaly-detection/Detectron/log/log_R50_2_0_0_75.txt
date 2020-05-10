@@ -1,0 +1,873 @@
+Found Detectron ops lib: /home/vhvkhoa/anaconda3/envs/aic-track3/lib/python2.7/site-packages/torch/lib/libcaffe2_detectron_ops_gpu.so
+INFO train.py: 142: Building model: retinanet
+WARNING cnn.py:  25: [====DEPRECATE WARNING====]: you are creating an object from CNNModelHelper class which will be deprecated soon. Please use ModelHelper object with brew module. For more information, please refer to caffe2.ai and python/brew.py, python/brew_test.py for more information.
+WARNING memonger.py:  55: NOTE: Executing memonger to optimize gradient memory
+INFO memonger.py:  97: Memonger memory optimization took 0.010792016983 secs
+INFO train.py: 189: Loading dataset: ('car_detection_train',)
+loading annotations into memory...
+Done (t=0.11s)
+creating index...
+index created!
+INFO roidb.py:  49: Appending horizontally-flipped training examples...
+INFO roidb.py:  51: Loaded dataset: car_detection_train
+INFO roidb.py: 135: Filtered 0 roidb entries: 1280 -> 1280
+INFO roidb.py:  67: Computing bounding-box regression targets...
+INFO roidb.py:  69: done
+INFO train.py: 193: 1280 roidb entries
+INFO net.py:  60: Loading weights from: models/R-50.pkl
+INFO net.py:  96: conv1_w loaded from weights file into gpu_0/conv1_w: (64, 3, 7, 7)
+INFO net.py:  96: res_conv1_bn_s loaded from weights file into gpu_0/res_conv1_bn_s: (64,)
+INFO net.py:  96: res_conv1_bn_b loaded from weights file into gpu_0/res_conv1_bn_b: (64,)
+INFO net.py:  96: res2_0_branch2a_w loaded from weights file into gpu_0/res2_0_branch2a_w: (64, 64, 1, 1)
+INFO net.py:  96: res2_0_branch2a_bn_s loaded from weights file into gpu_0/res2_0_branch2a_bn_s: (64,)
+INFO net.py:  96: res2_0_branch2a_bn_b loaded from weights file into gpu_0/res2_0_branch2a_bn_b: (64,)
+INFO net.py:  96: res2_0_branch2b_w loaded from weights file into gpu_0/res2_0_branch2b_w: (64, 64, 3, 3)
+INFO net.py:  96: res2_0_branch2b_bn_s loaded from weights file into gpu_0/res2_0_branch2b_bn_s: (64,)
+INFO net.py:  96: res2_0_branch2b_bn_b loaded from weights file into gpu_0/res2_0_branch2b_bn_b: (64,)
+INFO net.py:  96: res2_0_branch2c_w loaded from weights file into gpu_0/res2_0_branch2c_w: (256, 64, 1, 1)
+INFO net.py:  96: res2_0_branch2c_bn_s loaded from weights file into gpu_0/res2_0_branch2c_bn_s: (256,)
+INFO net.py:  96: res2_0_branch2c_bn_b loaded from weights file into gpu_0/res2_0_branch2c_bn_b: (256,)
+INFO net.py:  96: res2_0_branch1_w loaded from weights file into gpu_0/res2_0_branch1_w: (256, 64, 1, 1)
+INFO net.py:  96: res2_0_branch1_bn_s loaded from weights file into gpu_0/res2_0_branch1_bn_s: (256,)
+INFO net.py:  96: res2_0_branch1_bn_b loaded from weights file into gpu_0/res2_0_branch1_bn_b: (256,)
+INFO net.py:  96: res2_1_branch2a_w loaded from weights file into gpu_0/res2_1_branch2a_w: (64, 256, 1, 1)
+INFO net.py:  96: res2_1_branch2a_bn_s loaded from weights file into gpu_0/res2_1_branch2a_bn_s: (64,)
+INFO net.py:  96: res2_1_branch2a_bn_b loaded from weights file into gpu_0/res2_1_branch2a_bn_b: (64,)
+INFO net.py:  96: res2_1_branch2b_w loaded from weights file into gpu_0/res2_1_branch2b_w: (64, 64, 3, 3)
+INFO net.py:  96: res2_1_branch2b_bn_s loaded from weights file into gpu_0/res2_1_branch2b_bn_s: (64,)
+INFO net.py:  96: res2_1_branch2b_bn_b loaded from weights file into gpu_0/res2_1_branch2b_bn_b: (64,)
+INFO net.py:  96: res2_1_branch2c_w loaded from weights file into gpu_0/res2_1_branch2c_w: (256, 64, 1, 1)
+INFO net.py:  96: res2_1_branch2c_bn_s loaded from weights file into gpu_0/res2_1_branch2c_bn_s: (256,)
+INFO net.py:  96: res2_1_branch2c_bn_b loaded from weights file into gpu_0/res2_1_branch2c_bn_b: (256,)
+INFO net.py:  96: res2_2_branch2a_w loaded from weights file into gpu_0/res2_2_branch2a_w: (64, 256, 1, 1)
+INFO net.py:  96: res2_2_branch2a_bn_s loaded from weights file into gpu_0/res2_2_branch2a_bn_s: (64,)
+INFO net.py:  96: res2_2_branch2a_bn_b loaded from weights file into gpu_0/res2_2_branch2a_bn_b: (64,)
+INFO net.py:  96: res2_2_branch2b_w loaded from weights file into gpu_0/res2_2_branch2b_w: (64, 64, 3, 3)
+INFO net.py:  96: res2_2_branch2b_bn_s loaded from weights file into gpu_0/res2_2_branch2b_bn_s: (64,)
+INFO net.py:  96: res2_2_branch2b_bn_b loaded from weights file into gpu_0/res2_2_branch2b_bn_b: (64,)
+INFO net.py:  96: res2_2_branch2c_w loaded from weights file into gpu_0/res2_2_branch2c_w: (256, 64, 1, 1)
+INFO net.py:  96: res2_2_branch2c_bn_s loaded from weights file into gpu_0/res2_2_branch2c_bn_s: (256,)
+INFO net.py:  96: res2_2_branch2c_bn_b loaded from weights file into gpu_0/res2_2_branch2c_bn_b: (256,)
+INFO net.py:  96: res3_0_branch2a_w loaded from weights file into gpu_0/res3_0_branch2a_w: (128, 256, 1, 1)
+INFO net.py:  96: res3_0_branch2a_bn_s loaded from weights file into gpu_0/res3_0_branch2a_bn_s: (128,)
+INFO net.py:  96: res3_0_branch2a_bn_b loaded from weights file into gpu_0/res3_0_branch2a_bn_b: (128,)
+INFO net.py:  96: res3_0_branch2b_w loaded from weights file into gpu_0/res3_0_branch2b_w: (128, 128, 3, 3)
+INFO net.py:  96: res3_0_branch2b_bn_s loaded from weights file into gpu_0/res3_0_branch2b_bn_s: (128,)
+INFO net.py:  96: res3_0_branch2b_bn_b loaded from weights file into gpu_0/res3_0_branch2b_bn_b: (128,)
+INFO net.py:  96: res3_0_branch2c_w loaded from weights file into gpu_0/res3_0_branch2c_w: (512, 128, 1, 1)
+INFO net.py:  96: res3_0_branch2c_bn_s loaded from weights file into gpu_0/res3_0_branch2c_bn_s: (512,)
+INFO net.py:  96: res3_0_branch2c_bn_b loaded from weights file into gpu_0/res3_0_branch2c_bn_b: (512,)
+INFO net.py:  96: res3_0_branch1_w loaded from weights file into gpu_0/res3_0_branch1_w: (512, 256, 1, 1)
+INFO net.py:  96: res3_0_branch1_bn_s loaded from weights file into gpu_0/res3_0_branch1_bn_s: (512,)
+INFO net.py:  96: res3_0_branch1_bn_b loaded from weights file into gpu_0/res3_0_branch1_bn_b: (512,)
+INFO net.py:  96: res3_1_branch2a_w loaded from weights file into gpu_0/res3_1_branch2a_w: (128, 512, 1, 1)
+INFO net.py:  96: res3_1_branch2a_bn_s loaded from weights file into gpu_0/res3_1_branch2a_bn_s: (128,)
+INFO net.py:  96: res3_1_branch2a_bn_b loaded from weights file into gpu_0/res3_1_branch2a_bn_b: (128,)
+INFO net.py:  96: res3_1_branch2b_w loaded from weights file into gpu_0/res3_1_branch2b_w: (128, 128, 3, 3)
+INFO net.py:  96: res3_1_branch2b_bn_s loaded from weights file into gpu_0/res3_1_branch2b_bn_s: (128,)
+INFO net.py:  96: res3_1_branch2b_bn_b loaded from weights file into gpu_0/res3_1_branch2b_bn_b: (128,)
+INFO net.py:  96: res3_1_branch2c_w loaded from weights file into gpu_0/res3_1_branch2c_w: (512, 128, 1, 1)
+INFO net.py:  96: res3_1_branch2c_bn_s loaded from weights file into gpu_0/res3_1_branch2c_bn_s: (512,)
+INFO net.py:  96: res3_1_branch2c_bn_b loaded from weights file into gpu_0/res3_1_branch2c_bn_b: (512,)
+INFO net.py:  96: res3_2_branch2a_w loaded from weights file into gpu_0/res3_2_branch2a_w: (128, 512, 1, 1)
+INFO net.py:  96: res3_2_branch2a_bn_s loaded from weights file into gpu_0/res3_2_branch2a_bn_s: (128,)
+INFO net.py:  96: res3_2_branch2a_bn_b loaded from weights file into gpu_0/res3_2_branch2a_bn_b: (128,)
+INFO net.py:  96: res3_2_branch2b_w loaded from weights file into gpu_0/res3_2_branch2b_w: (128, 128, 3, 3)
+INFO net.py:  96: res3_2_branch2b_bn_s loaded from weights file into gpu_0/res3_2_branch2b_bn_s: (128,)
+INFO net.py:  96: res3_2_branch2b_bn_b loaded from weights file into gpu_0/res3_2_branch2b_bn_b: (128,)
+INFO net.py:  96: res3_2_branch2c_w loaded from weights file into gpu_0/res3_2_branch2c_w: (512, 128, 1, 1)
+INFO net.py:  96: res3_2_branch2c_bn_s loaded from weights file into gpu_0/res3_2_branch2c_bn_s: (512,)
+INFO net.py:  96: res3_2_branch2c_bn_b loaded from weights file into gpu_0/res3_2_branch2c_bn_b: (512,)
+INFO net.py:  96: res3_3_branch2a_w loaded from weights file into gpu_0/res3_3_branch2a_w: (128, 512, 1, 1)
+INFO net.py:  96: res3_3_branch2a_bn_s loaded from weights file into gpu_0/res3_3_branch2a_bn_s: (128,)
+INFO net.py:  96: res3_3_branch2a_bn_b loaded from weights file into gpu_0/res3_3_branch2a_bn_b: (128,)
+INFO net.py:  96: res3_3_branch2b_w loaded from weights file into gpu_0/res3_3_branch2b_w: (128, 128, 3, 3)
+INFO net.py:  96: res3_3_branch2b_bn_s loaded from weights file into gpu_0/res3_3_branch2b_bn_s: (128,)
+INFO net.py:  96: res3_3_branch2b_bn_b loaded from weights file into gpu_0/res3_3_branch2b_bn_b: (128,)
+INFO net.py:  96: res3_3_branch2c_w loaded from weights file into gpu_0/res3_3_branch2c_w: (512, 128, 1, 1)
+INFO net.py:  96: res3_3_branch2c_bn_s loaded from weights file into gpu_0/res3_3_branch2c_bn_s: (512,)
+INFO net.py:  96: res3_3_branch2c_bn_b loaded from weights file into gpu_0/res3_3_branch2c_bn_b: (512,)
+INFO net.py:  96: res4_0_branch2a_w loaded from weights file into gpu_0/res4_0_branch2a_w: (256, 512, 1, 1)
+INFO net.py:  96: res4_0_branch2a_bn_s loaded from weights file into gpu_0/res4_0_branch2a_bn_s: (256,)
+INFO net.py:  96: res4_0_branch2a_bn_b loaded from weights file into gpu_0/res4_0_branch2a_bn_b: (256,)
+INFO net.py:  96: res4_0_branch2b_w loaded from weights file into gpu_0/res4_0_branch2b_w: (256, 256, 3, 3)
+INFO net.py:  96: res4_0_branch2b_bn_s loaded from weights file into gpu_0/res4_0_branch2b_bn_s: (256,)
+INFO net.py:  96: res4_0_branch2b_bn_b loaded from weights file into gpu_0/res4_0_branch2b_bn_b: (256,)
+INFO net.py:  96: res4_0_branch2c_w loaded from weights file into gpu_0/res4_0_branch2c_w: (1024, 256, 1, 1)
+INFO net.py:  96: res4_0_branch2c_bn_s loaded from weights file into gpu_0/res4_0_branch2c_bn_s: (1024,)
+INFO net.py:  96: res4_0_branch2c_bn_b loaded from weights file into gpu_0/res4_0_branch2c_bn_b: (1024,)
+INFO net.py:  96: res4_0_branch1_w loaded from weights file into gpu_0/res4_0_branch1_w: (1024, 512, 1, 1)
+INFO net.py:  96: res4_0_branch1_bn_s loaded from weights file into gpu_0/res4_0_branch1_bn_s: (1024,)
+INFO net.py:  96: res4_0_branch1_bn_b loaded from weights file into gpu_0/res4_0_branch1_bn_b: (1024,)
+INFO net.py:  96: res4_1_branch2a_w loaded from weights file into gpu_0/res4_1_branch2a_w: (256, 1024, 1, 1)
+INFO net.py:  96: res4_1_branch2a_bn_s loaded from weights file into gpu_0/res4_1_branch2a_bn_s: (256,)
+INFO net.py:  96: res4_1_branch2a_bn_b loaded from weights file into gpu_0/res4_1_branch2a_bn_b: (256,)
+INFO net.py:  96: res4_1_branch2b_w loaded from weights file into gpu_0/res4_1_branch2b_w: (256, 256, 3, 3)
+INFO net.py:  96: res4_1_branch2b_bn_s loaded from weights file into gpu_0/res4_1_branch2b_bn_s: (256,)
+INFO net.py:  96: res4_1_branch2b_bn_b loaded from weights file into gpu_0/res4_1_branch2b_bn_b: (256,)
+INFO net.py:  96: res4_1_branch2c_w loaded from weights file into gpu_0/res4_1_branch2c_w: (1024, 256, 1, 1)
+INFO net.py:  96: res4_1_branch2c_bn_s loaded from weights file into gpu_0/res4_1_branch2c_bn_s: (1024,)
+INFO net.py:  96: res4_1_branch2c_bn_b loaded from weights file into gpu_0/res4_1_branch2c_bn_b: (1024,)
+INFO net.py:  96: res4_2_branch2a_w loaded from weights file into gpu_0/res4_2_branch2a_w: (256, 1024, 1, 1)
+INFO net.py:  96: res4_2_branch2a_bn_s loaded from weights file into gpu_0/res4_2_branch2a_bn_s: (256,)
+INFO net.py:  96: res4_2_branch2a_bn_b loaded from weights file into gpu_0/res4_2_branch2a_bn_b: (256,)
+INFO net.py:  96: res4_2_branch2b_w loaded from weights file into gpu_0/res4_2_branch2b_w: (256, 256, 3, 3)
+INFO net.py:  96: res4_2_branch2b_bn_s loaded from weights file into gpu_0/res4_2_branch2b_bn_s: (256,)
+INFO net.py:  96: res4_2_branch2b_bn_b loaded from weights file into gpu_0/res4_2_branch2b_bn_b: (256,)
+INFO net.py:  96: res4_2_branch2c_w loaded from weights file into gpu_0/res4_2_branch2c_w: (1024, 256, 1, 1)
+INFO net.py:  96: res4_2_branch2c_bn_s loaded from weights file into gpu_0/res4_2_branch2c_bn_s: (1024,)
+INFO net.py:  96: res4_2_branch2c_bn_b loaded from weights file into gpu_0/res4_2_branch2c_bn_b: (1024,)
+INFO net.py:  96: res4_3_branch2a_w loaded from weights file into gpu_0/res4_3_branch2a_w: (256, 1024, 1, 1)
+INFO net.py:  96: res4_3_branch2a_bn_s loaded from weights file into gpu_0/res4_3_branch2a_bn_s: (256,)
+INFO net.py:  96: res4_3_branch2a_bn_b loaded from weights file into gpu_0/res4_3_branch2a_bn_b: (256,)
+INFO net.py:  96: res4_3_branch2b_w loaded from weights file into gpu_0/res4_3_branch2b_w: (256, 256, 3, 3)
+INFO net.py:  96: res4_3_branch2b_bn_s loaded from weights file into gpu_0/res4_3_branch2b_bn_s: (256,)
+INFO net.py:  96: res4_3_branch2b_bn_b loaded from weights file into gpu_0/res4_3_branch2b_bn_b: (256,)
+INFO net.py:  96: res4_3_branch2c_w loaded from weights file into gpu_0/res4_3_branch2c_w: (1024, 256, 1, 1)
+INFO net.py:  96: res4_3_branch2c_bn_s loaded from weights file into gpu_0/res4_3_branch2c_bn_s: (1024,)
+INFO net.py:  96: res4_3_branch2c_bn_b loaded from weights file into gpu_0/res4_3_branch2c_bn_b: (1024,)
+INFO net.py:  96: res4_4_branch2a_w loaded from weights file into gpu_0/res4_4_branch2a_w: (256, 1024, 1, 1)
+INFO net.py:  96: res4_4_branch2a_bn_s loaded from weights file into gpu_0/res4_4_branch2a_bn_s: (256,)
+INFO net.py:  96: res4_4_branch2a_bn_b loaded from weights file into gpu_0/res4_4_branch2a_bn_b: (256,)
+INFO net.py:  96: res4_4_branch2b_w loaded from weights file into gpu_0/res4_4_branch2b_w: (256, 256, 3, 3)
+INFO net.py:  96: res4_4_branch2b_bn_s loaded from weights file into gpu_0/res4_4_branch2b_bn_s: (256,)
+INFO net.py:  96: res4_4_branch2b_bn_b loaded from weights file into gpu_0/res4_4_branch2b_bn_b: (256,)
+INFO net.py:  96: res4_4_branch2c_w loaded from weights file into gpu_0/res4_4_branch2c_w: (1024, 256, 1, 1)
+INFO net.py:  96: res4_4_branch2c_bn_s loaded from weights file into gpu_0/res4_4_branch2c_bn_s: (1024,)
+INFO net.py:  96: res4_4_branch2c_bn_b loaded from weights file into gpu_0/res4_4_branch2c_bn_b: (1024,)
+INFO net.py:  96: res4_5_branch2a_w loaded from weights file into gpu_0/res4_5_branch2a_w: (256, 1024, 1, 1)
+INFO net.py:  96: res4_5_branch2a_bn_s loaded from weights file into gpu_0/res4_5_branch2a_bn_s: (256,)
+INFO net.py:  96: res4_5_branch2a_bn_b loaded from weights file into gpu_0/res4_5_branch2a_bn_b: (256,)
+INFO net.py:  96: res4_5_branch2b_w loaded from weights file into gpu_0/res4_5_branch2b_w: (256, 256, 3, 3)
+INFO net.py:  96: res4_5_branch2b_bn_s loaded from weights file into gpu_0/res4_5_branch2b_bn_s: (256,)
+INFO net.py:  96: res4_5_branch2b_bn_b loaded from weights file into gpu_0/res4_5_branch2b_bn_b: (256,)
+INFO net.py:  96: res4_5_branch2c_w loaded from weights file into gpu_0/res4_5_branch2c_w: (1024, 256, 1, 1)
+INFO net.py:  96: res4_5_branch2c_bn_s loaded from weights file into gpu_0/res4_5_branch2c_bn_s: (1024,)
+INFO net.py:  96: res4_5_branch2c_bn_b loaded from weights file into gpu_0/res4_5_branch2c_bn_b: (1024,)
+INFO net.py:  96: res5_0_branch2a_w loaded from weights file into gpu_0/res5_0_branch2a_w: (512, 1024, 1, 1)
+INFO net.py:  96: res5_0_branch2a_bn_s loaded from weights file into gpu_0/res5_0_branch2a_bn_s: (512,)
+INFO net.py:  96: res5_0_branch2a_bn_b loaded from weights file into gpu_0/res5_0_branch2a_bn_b: (512,)
+INFO net.py:  96: res5_0_branch2b_w loaded from weights file into gpu_0/res5_0_branch2b_w: (512, 512, 3, 3)
+INFO net.py:  96: res5_0_branch2b_bn_s loaded from weights file into gpu_0/res5_0_branch2b_bn_s: (512,)
+INFO net.py:  96: res5_0_branch2b_bn_b loaded from weights file into gpu_0/res5_0_branch2b_bn_b: (512,)
+INFO net.py:  96: res5_0_branch2c_w loaded from weights file into gpu_0/res5_0_branch2c_w: (2048, 512, 1, 1)
+INFO net.py:  96: res5_0_branch2c_bn_s loaded from weights file into gpu_0/res5_0_branch2c_bn_s: (2048,)
+INFO net.py:  96: res5_0_branch2c_bn_b loaded from weights file into gpu_0/res5_0_branch2c_bn_b: (2048,)
+INFO net.py:  96: res5_0_branch1_w loaded from weights file into gpu_0/res5_0_branch1_w: (2048, 1024, 1, 1)
+INFO net.py:  96: res5_0_branch1_bn_s loaded from weights file into gpu_0/res5_0_branch1_bn_s: (2048,)
+INFO net.py:  96: res5_0_branch1_bn_b loaded from weights file into gpu_0/res5_0_branch1_bn_b: (2048,)
+INFO net.py:  96: res5_1_branch2a_w loaded from weights file into gpu_0/res5_1_branch2a_w: (512, 2048, 1, 1)
+INFO net.py:  96: res5_1_branch2a_bn_s loaded from weights file into gpu_0/res5_1_branch2a_bn_s: (512,)
+INFO net.py:  96: res5_1_branch2a_bn_b loaded from weights file into gpu_0/res5_1_branch2a_bn_b: (512,)
+INFO net.py:  96: res5_1_branch2b_w loaded from weights file into gpu_0/res5_1_branch2b_w: (512, 512, 3, 3)
+INFO net.py:  96: res5_1_branch2b_bn_s loaded from weights file into gpu_0/res5_1_branch2b_bn_s: (512,)
+INFO net.py:  96: res5_1_branch2b_bn_b loaded from weights file into gpu_0/res5_1_branch2b_bn_b: (512,)
+INFO net.py:  96: res5_1_branch2c_w loaded from weights file into gpu_0/res5_1_branch2c_w: (2048, 512, 1, 1)
+INFO net.py:  96: res5_1_branch2c_bn_s loaded from weights file into gpu_0/res5_1_branch2c_bn_s: (2048,)
+INFO net.py:  96: res5_1_branch2c_bn_b loaded from weights file into gpu_0/res5_1_branch2c_bn_b: (2048,)
+INFO net.py:  96: res5_2_branch2a_w loaded from weights file into gpu_0/res5_2_branch2a_w: (512, 2048, 1, 1)
+INFO net.py:  96: res5_2_branch2a_bn_s loaded from weights file into gpu_0/res5_2_branch2a_bn_s: (512,)
+INFO net.py:  96: res5_2_branch2a_bn_b loaded from weights file into gpu_0/res5_2_branch2a_bn_b: (512,)
+INFO net.py:  96: res5_2_branch2b_w loaded from weights file into gpu_0/res5_2_branch2b_w: (512, 512, 3, 3)
+INFO net.py:  96: res5_2_branch2b_bn_s loaded from weights file into gpu_0/res5_2_branch2b_bn_s: (512,)
+INFO net.py:  96: res5_2_branch2b_bn_b loaded from weights file into gpu_0/res5_2_branch2b_bn_b: (512,)
+INFO net.py:  96: res5_2_branch2c_w loaded from weights file into gpu_0/res5_2_branch2c_w: (2048, 512, 1, 1)
+INFO net.py:  96: res5_2_branch2c_bn_s loaded from weights file into gpu_0/res5_2_branch2c_bn_s: (2048,)
+INFO net.py:  96: res5_2_branch2c_bn_b loaded from weights file into gpu_0/res5_2_branch2c_bn_b: (2048,)
+INFO net.py:  89: fpn_inner_res5_2_sum_w not found
+INFO net.py:  89: fpn_inner_res5_2_sum_b not found
+INFO net.py:  89: fpn_inner_res4_5_sum_lateral_w not found
+INFO net.py:  89: fpn_inner_res4_5_sum_lateral_b not found
+INFO net.py:  89: fpn_inner_res3_3_sum_lateral_w not found
+INFO net.py:  89: fpn_inner_res3_3_sum_lateral_b not found
+INFO net.py:  89: fpn_res5_2_sum_w not found
+INFO net.py:  89: fpn_res5_2_sum_b not found
+INFO net.py:  89: fpn_res4_5_sum_w not found
+INFO net.py:  89: fpn_res4_5_sum_b not found
+INFO net.py:  89: fpn_res3_3_sum_w not found
+INFO net.py:  89: fpn_res3_3_sum_b not found
+INFO net.py:  89: retnet_cls_conv_n0_fpn3_w not found
+INFO net.py:  89: retnet_cls_conv_n0_fpn3_b not found
+INFO net.py:  89: retnet_cls_conv_n1_fpn3_w not found
+INFO net.py:  89: retnet_cls_conv_n1_fpn3_b not found
+INFO net.py:  89: retnet_cls_conv_n2_fpn3_w not found
+INFO net.py:  89: retnet_cls_conv_n2_fpn3_b not found
+INFO net.py:  89: retnet_cls_conv_n3_fpn3_w not found
+INFO net.py:  89: retnet_cls_conv_n3_fpn3_b not found
+INFO net.py:  89: retnet_cls_pred_fpn3_w not found
+INFO net.py:  89: retnet_cls_pred_fpn3_b not found
+INFO net.py:  89: retnet_bbox_conv_n0_fpn3_w not found
+INFO net.py:  89: retnet_bbox_conv_n0_fpn3_b not found
+INFO net.py:  89: retnet_bbox_conv_n1_fpn3_w not found
+INFO net.py:  89: retnet_bbox_conv_n1_fpn3_b not found
+INFO net.py:  89: retnet_bbox_conv_n2_fpn3_w not found
+INFO net.py:  89: retnet_bbox_conv_n2_fpn3_b not found
+INFO net.py:  89: retnet_bbox_conv_n3_fpn3_w not found
+INFO net.py:  89: retnet_bbox_conv_n3_fpn3_b not found
+INFO net.py:  89: retnet_bbox_pred_fpn3_w not found
+INFO net.py:  89: retnet_bbox_pred_fpn3_b not found
+INFO net.py: 133: res2_1_branch2c_b preserved in workspace (unused)
+INFO net.py: 133: res3_1_branch2b_b preserved in workspace (unused)
+INFO net.py: 133: res4_2_branch2c_b preserved in workspace (unused)
+INFO net.py: 133: res4_0_branch2c_b preserved in workspace (unused)
+INFO net.py: 133: res2_2_branch2a_b preserved in workspace (unused)
+INFO net.py: 133: res3_3_branch2a_b preserved in workspace (unused)
+INFO net.py: 133: res5_1_branch2b_b preserved in workspace (unused)
+INFO net.py: 133: res3_3_branch2c_b preserved in workspace (unused)
+INFO net.py: 133: res4_4_branch2b_b preserved in workspace (unused)
+INFO net.py: 133: res4_5_branch2b_b preserved in workspace (unused)
+INFO net.py: 133: conv1_b preserved in workspace (unused)
+INFO net.py: 133: fc1000_b preserved in workspace (unused)
+INFO net.py: 133: fc1000_w preserved in workspace (unused)
+INFO net.py: 133: res3_2_branch2c_b preserved in workspace (unused)
+INFO net.py: 133: res3_2_branch2a_b preserved in workspace (unused)
+INFO net.py: 133: res2_0_branch1_b preserved in workspace (unused)
+INFO net.py: 133: res4_2_branch2a_b preserved in workspace (unused)
+INFO net.py: 133: res2_1_branch2b_b preserved in workspace (unused)
+INFO net.py: 133: res5_0_branch2b_b preserved in workspace (unused)
+INFO net.py: 133: res4_5_branch2a_b preserved in workspace (unused)
+INFO net.py: 133: res4_1_branch2b_b preserved in workspace (unused)
+INFO net.py: 133: res4_3_branch2b_b preserved in workspace (unused)
+INFO net.py: 133: res4_0_branch2b_b preserved in workspace (unused)
+INFO net.py: 133: res4_2_branch2b_b preserved in workspace (unused)
+INFO net.py: 133: res2_0_branch2c_b preserved in workspace (unused)
+INFO net.py: 133: res4_0_branch1_b preserved in workspace (unused)
+INFO net.py: 133: res2_2_branch2c_b preserved in workspace (unused)
+INFO net.py: 133: res3_2_branch2b_b preserved in workspace (unused)
+INFO net.py: 133: res3_0_branch1_b preserved in workspace (unused)
+INFO net.py: 133: res3_1_branch2c_b preserved in workspace (unused)
+INFO net.py: 133: res2_0_branch2b_b preserved in workspace (unused)
+INFO net.py: 133: res2_1_branch2a_b preserved in workspace (unused)
+INFO net.py: 133: res4_1_branch2c_b preserved in workspace (unused)
+INFO net.py: 133: res4_0_branch2a_b preserved in workspace (unused)
+INFO net.py: 133: res4_1_branch2a_b preserved in workspace (unused)
+INFO net.py: 133: res2_2_branch2b_b preserved in workspace (unused)
+INFO net.py: 133: res5_2_branch2b_b preserved in workspace (unused)
+INFO net.py: 133: res4_5_branch2c_b preserved in workspace (unused)
+INFO net.py: 133: res3_0_branch2b_b preserved in workspace (unused)
+INFO net.py: 133: res3_1_branch2a_b preserved in workspace (unused)
+INFO net.py: 133: res5_1_branch2a_b preserved in workspace (unused)
+INFO net.py: 133: res5_1_branch2c_b preserved in workspace (unused)
+INFO net.py: 133: res4_4_branch2a_b preserved in workspace (unused)
+INFO net.py: 133: res5_2_branch2c_b preserved in workspace (unused)
+INFO net.py: 133: res3_3_branch2b_b preserved in workspace (unused)
+INFO net.py: 133: res4_4_branch2c_b preserved in workspace (unused)
+INFO net.py: 133: res4_3_branch2a_b preserved in workspace (unused)
+INFO net.py: 133: res5_0_branch2c_b preserved in workspace (unused)
+INFO net.py: 133: res5_2_branch2a_b preserved in workspace (unused)
+INFO net.py: 133: res5_0_branch2a_b preserved in workspace (unused)
+INFO net.py: 133: res3_0_branch2a_b preserved in workspace (unused)
+INFO net.py: 133: res5_0_branch1_b preserved in workspace (unused)
+INFO net.py: 133: res3_0_branch2c_b preserved in workspace (unused)
+INFO net.py: 133: res2_0_branch2a_b preserved in workspace (unused)
+INFO net.py: 133: res4_3_branch2c_b preserved in workspace (unused)
+INFO train.py: 177: Outputs saved to: /home/vhvkhoa/aic_track3/Detectron/car_det/R50_2_0_0_75/train/car_detection_train/retinanet
+INFO loader.py: 230: Pre-filling mini-batch queue...
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [1/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [1/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [2/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [1/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [0/64]
+INFO loader.py: 235:   [1/64]
+INFO loader.py: 235:   [1/64]
+INFO loader.py: 235:   [1/64]
+INFO loader.py: 235:   [2/64]
+INFO loader.py: 235:   [2/64]
+INFO loader.py: 235:   [2/64]
+INFO loader.py: 235:   [2/64]
+INFO loader.py: 235:   [2/64]
+INFO loader.py: 235:   [2/64]
+INFO loader.py: 235:   [2/64]
+INFO loader.py: 235:   [2/64]
+INFO loader.py: 235:   [3/64]
+INFO loader.py: 235:   [3/64]
+INFO loader.py: 235:   [3/64]
+INFO loader.py: 235:   [4/64]
+INFO loader.py: 235:   [4/64]
+INFO loader.py: 235:   [4/64]
+INFO loader.py: 235:   [6/64]
+INFO loader.py: 235:   [6/64]
+INFO loader.py: 235:   [6/64]
+INFO loader.py: 235:   [6/64]
+INFO loader.py: 235:   [6/64]
+INFO loader.py: 235:   [6/64]
+INFO loader.py: 235:   [7/64]
+INFO loader.py: 235:   [7/64]
+INFO loader.py: 235:   [7/64]
+INFO loader.py: 235:   [7/64]
+INFO loader.py: 235:   [7/64]
+INFO loader.py: 235:   [7/64]
+INFO loader.py: 235:   [9/64]
+INFO loader.py: 235:   [10/64]
+INFO loader.py: 235:   [10/64]
+INFO loader.py: 235:   [10/64]
+INFO loader.py: 235:   [10/64]
+INFO loader.py: 235:   [10/64]
+INFO loader.py: 235:   [10/64]
+INFO loader.py: 235:   [10/64]
+INFO loader.py: 235:   [10/64]
+INFO loader.py: 235:   [10/64]
+INFO loader.py: 235:   [11/64]
+INFO loader.py: 235:   [11/64]
+INFO loader.py: 235:   [11/64]
+INFO loader.py: 235:   [12/64]
+INFO loader.py: 235:   [13/64]
+INFO loader.py: 235:   [13/64]
+INFO loader.py: 235:   [14/64]
+INFO loader.py: 235:   [14/64]
+INFO loader.py: 235:   [14/64]
+INFO loader.py: 235:   [14/64]
+INFO loader.py: 235:   [14/64]
+INFO loader.py: 235:   [14/64]
+INFO loader.py: 235:   [14/64]
+INFO loader.py: 235:   [14/64]
+INFO loader.py: 235:   [15/64]
+INFO loader.py: 235:   [15/64]
+INFO loader.py: 235:   [15/64]
+INFO loader.py: 235:   [15/64]
+INFO loader.py: 235:   [15/64]
+INFO loader.py: 235:   [15/64]
+INFO loader.py: 235:   [15/64]
+INFO loader.py: 235:   [17/64]
+INFO loader.py: 235:   [18/64]
+INFO loader.py: 235:   [18/64]
+INFO loader.py: 235:   [18/64]
+INFO loader.py: 235:   [18/64]
+INFO loader.py: 235:   [18/64]
+INFO loader.py: 235:   [18/64]
+INFO loader.py: 235:   [19/64]
+INFO loader.py: 235:   [19/64]
+INFO loader.py: 235:   [19/64]
+INFO loader.py: 235:   [19/64]
+INFO loader.py: 235:   [20/64]
+INFO loader.py: 235:   [20/64]
+INFO loader.py: 235:   [20/64]
+INFO loader.py: 235:   [21/64]
+INFO loader.py: 235:   [22/64]
+INFO loader.py: 235:   [22/64]
+INFO loader.py: 235:   [22/64]
+INFO loader.py: 235:   [23/64]
+INFO loader.py: 235:   [24/64]
+INFO loader.py: 235:   [24/64]
+INFO loader.py: 235:   [24/64]
+INFO loader.py: 235:   [24/64]
+INFO loader.py: 235:   [24/64]
+INFO loader.py: 235:   [25/64]
+INFO loader.py: 235:   [25/64]
+INFO loader.py: 235:   [25/64]
+INFO loader.py: 235:   [25/64]
+INFO loader.py: 235:   [25/64]
+INFO loader.py: 235:   [25/64]
+INFO loader.py: 235:   [27/64]
+INFO loader.py: 235:   [28/64]
+INFO loader.py: 235:   [28/64]
+INFO loader.py: 235:   [28/64]
+INFO loader.py: 235:   [28/64]
+INFO loader.py: 235:   [28/64]
+INFO loader.py: 235:   [28/64]
+INFO loader.py: 235:   [28/64]
+INFO loader.py: 235:   [28/64]
+INFO loader.py: 235:   [29/64]
+INFO loader.py: 235:   [30/64]
+INFO loader.py: 235:   [31/64]
+INFO loader.py: 235:   [31/64]
+INFO loader.py: 235:   [31/64]
+INFO loader.py: 235:   [31/64]
+INFO loader.py: 235:   [31/64]
+INFO loader.py: 235:   [31/64]
+INFO loader.py: 235:   [32/64]
+INFO loader.py: 235:   [32/64]
+INFO loader.py: 235:   [32/64]
+INFO loader.py: 235:   [32/64]
+INFO loader.py: 235:   [32/64]
+INFO loader.py: 235:   [32/64]
+INFO loader.py: 235:   [32/64]
+INFO loader.py: 235:   [32/64]
+INFO loader.py: 235:   [32/64]
+INFO loader.py: 235:   [33/64]
+INFO loader.py: 235:   [33/64]
+INFO loader.py: 235:   [34/64]
+INFO loader.py: 235:   [35/64]
+INFO loader.py: 235:   [36/64]
+INFO loader.py: 235:   [36/64]
+INFO loader.py: 235:   [36/64]
+INFO loader.py: 235:   [36/64]
+INFO loader.py: 235:   [36/64]
+INFO loader.py: 235:   [36/64]
+INFO loader.py: 235:   [36/64]
+INFO loader.py: 235:   [36/64]
+INFO loader.py: 235:   [36/64]
+INFO loader.py: 235:   [36/64]
+INFO loader.py: 235:   [36/64]
+INFO loader.py: 235:   [36/64]
+INFO loader.py: 235:   [36/64]
+INFO loader.py: 235:   [37/64]
+INFO loader.py: 235:   [37/64]
+INFO loader.py: 235:   [38/64]
+INFO loader.py: 235:   [38/64]
+INFO loader.py: 235:   [39/64]
+INFO loader.py: 235:   [39/64]
+INFO loader.py: 235:   [39/64]
+INFO loader.py: 235:   [40/64]
+INFO loader.py: 235:   [40/64]
+INFO loader.py: 235:   [40/64]
+INFO loader.py: 235:   [40/64]
+INFO loader.py: 235:   [40/64]
+INFO loader.py: 235:   [40/64]
+INFO loader.py: 235:   [40/64]
+INFO loader.py: 235:   [41/64]
+INFO loader.py: 235:   [41/64]
+INFO loader.py: 235:   [42/64]
+INFO loader.py: 235:   [42/64]
+INFO loader.py: 235:   [43/64]
+INFO loader.py: 235:   [44/64]
+INFO loader.py: 235:   [44/64]
+INFO loader.py: 235:   [44/64]
+INFO loader.py: 235:   [44/64]
+INFO loader.py: 235:   [44/64]
+INFO loader.py: 235:   [44/64]
+INFO loader.py: 235:   [44/64]
+INFO loader.py: 235:   [44/64]
+INFO loader.py: 235:   [45/64]
+INFO loader.py: 235:   [46/64]
+INFO loader.py: 235:   [46/64]
+INFO loader.py: 235:   [46/64]
+INFO loader.py: 235:   [46/64]
+INFO loader.py: 235:   [47/64]
+INFO loader.py: 235:   [48/64]
+INFO loader.py: 235:   [48/64]
+INFO loader.py: 235:   [48/64]
+INFO loader.py: 235:   [48/64]
+INFO loader.py: 235:   [48/64]
+INFO loader.py: 235:   [48/64]
+INFO loader.py: 235:   [48/64]
+INFO loader.py: 235:   [50/64]
+INFO loader.py: 235:   [50/64]
+INFO loader.py: 235:   [50/64]
+INFO loader.py: 235:   [51/64]
+INFO loader.py: 235:   [51/64]
+INFO loader.py: 235:   [51/64]
+INFO loader.py: 235:   [51/64]
+INFO loader.py: 235:   [52/64]
+INFO loader.py: 235:   [52/64]
+INFO loader.py: 235:   [52/64]
+INFO loader.py: 235:   [52/64]
+INFO loader.py: 235:   [53/64]
+INFO loader.py: 235:   [53/64]
+INFO loader.py: 235:   [53/64]
+INFO loader.py: 235:   [54/64]
+INFO loader.py: 235:   [54/64]
+INFO loader.py: 235:   [54/64]
+INFO loader.py: 235:   [54/64]
+INFO loader.py: 235:   [54/64]
+INFO loader.py: 235:   [55/64]
+INFO loader.py: 235:   [56/64]
+INFO loader.py: 235:   [56/64]
+INFO loader.py: 235:   [56/64]
+INFO loader.py: 235:   [56/64]
+INFO loader.py: 235:   [56/64]
+INFO loader.py: 235:   [56/64]
+INFO loader.py: 235:   [57/64]
+INFO loader.py: 235:   [58/64]
+INFO loader.py: 235:   [58/64]
+INFO loader.py: 235:   [58/64]
+INFO loader.py: 235:   [58/64]
+INFO loader.py: 235:   [58/64]
+INFO loader.py: 235:   [58/64]
+INFO loader.py: 235:   [58/64]
+INFO loader.py: 235:   [59/64]
+INFO loader.py: 235:   [59/64]
+INFO loader.py: 235:   [59/64]
+INFO loader.py: 235:   [59/64]
+INFO loader.py: 235:   [60/64]
+INFO loader.py: 235:   [61/64]
+INFO loader.py: 235:   [61/64]
+INFO loader.py: 235:   [61/64]
+INFO loader.py: 235:   [62/64]
+INFO loader.py: 235:   [62/64]
+INFO loader.py: 235:   [62/64]
+INFO loader.py: 235:   [62/64]
+INFO loader.py: 235:   [62/64]
+INFO loader.py: 235:   [62/64]
+INFO loader.py: 235:   [62/64]
+INFO loader.py: 235:   [62/64]
+INFO loader.py: 235:   [62/64]
+INFO loader.py: 235:   [62/64]
+INFO loader.py: 235:   [63/64]
+INFO loader.py: 235:   [63/64]
+INFO detector.py: 479: Changing learning rate 0.000000 -> 0.000333 at iter 0
+INFO net.py: 213: Printing model: retinanet
+INFO net.py: 250: data                        : (2, 3, 416, 736)     => conv1                       : (2, 64, 208, 368)    ------- (op: Conv)
+INFO net.py: 250: conv1                       : (2, 64, 208, 368)    => conv1                       : (2, 64, 208, 368)    ------- (op: AffineChannel)
+INFO net.py: 250: conv1                       : (2, 64, 208, 368)    => conv1                       : (2, 64, 208, 368)    ------- (op: Relu)
+INFO net.py: 250: conv1                       : (2, 64, 208, 368)    => pool1                       : (2, 64, 104, 184)    ------- (op: MaxPool)
+INFO net.py: 250: pool1                       : (2, 64, 104, 184)    => res2_0_branch2a             : (2, 64, 104, 184)    ------- (op: Conv)
+INFO net.py: 250: res2_0_branch2a             : (2, 64, 104, 184)    => res2_0_branch2a             : (2, 64, 104, 184)    ------- (op: AffineChannel)
+INFO net.py: 250: res2_0_branch2a             : (2, 64, 104, 184)    => res2_0_branch2a             : (2, 64, 104, 184)    ------- (op: Relu)
+INFO net.py: 250: res2_0_branch2a             : (2, 64, 104, 184)    => res2_0_branch2b             : (2, 64, 104, 184)    ------- (op: Conv)
+INFO net.py: 250: res2_0_branch2b             : (2, 64, 104, 184)    => res2_0_branch2b             : (2, 64, 104, 184)    ------- (op: AffineChannel)
+INFO net.py: 250: res2_0_branch2b             : (2, 64, 104, 184)    => res2_0_branch2b             : (2, 64, 104, 184)    ------- (op: Relu)
+INFO net.py: 250: res2_0_branch2b             : (2, 64, 104, 184)    => res2_0_branch2c             : (2, 256, 104, 184)   ------- (op: Conv)
+INFO net.py: 250: res2_0_branch2c             : (2, 256, 104, 184)   => res2_0_branch2c_bn          : (2, 256, 104, 184)   ------- (op: AffineChannel)
+INFO net.py: 250: pool1                       : (2, 64, 104, 184)    => res2_0_branch1              : (2, 256, 104, 184)   ------- (op: Conv)
+INFO net.py: 250: res2_0_branch1              : (2, 256, 104, 184)   => res2_0_branch1_bn           : (2, 256, 104, 184)   ------- (op: AffineChannel)
+INFO net.py: 250: res2_0_branch2c_bn          : (2, 256, 104, 184)   => res2_0_branch2c_bn          : (2, 256, 104, 184)   ------- (op: Sum)
+INFO net.py: 250: res2_0_branch1_bn           : (2, 256, 104, 184)   => res2_0_branch2c_bn          : (2, 256, 104, 184)   ------|
+INFO net.py: 250: res2_0_branch2c_bn          : (2, 256, 104, 184)   => res2_0_branch2c_bn          : (2, 256, 104, 184)   ------- (op: Relu)
+INFO net.py: 250: res2_0_branch2c_bn          : (2, 256, 104, 184)   => res2_1_branch2a             : (2, 64, 104, 184)    ------- (op: Conv)
+INFO net.py: 250: res2_1_branch2a             : (2, 64, 104, 184)    => res2_1_branch2a             : (2, 64, 104, 184)    ------- (op: AffineChannel)
+INFO net.py: 250: res2_1_branch2a             : (2, 64, 104, 184)    => res2_1_branch2a             : (2, 64, 104, 184)    ------- (op: Relu)
+INFO net.py: 250: res2_1_branch2a             : (2, 64, 104, 184)    => res2_1_branch2b             : (2, 64, 104, 184)    ------- (op: Conv)
+INFO net.py: 250: res2_1_branch2b             : (2, 64, 104, 184)    => res2_1_branch2b             : (2, 64, 104, 184)    ------- (op: AffineChannel)
+INFO net.py: 250: res2_1_branch2b             : (2, 64, 104, 184)    => res2_1_branch2b             : (2, 64, 104, 184)    ------- (op: Relu)
+INFO net.py: 250: res2_1_branch2b             : (2, 64, 104, 184)    => res2_1_branch2c             : (2, 256, 104, 184)   ------- (op: Conv)
+INFO net.py: 250: res2_1_branch2c             : (2, 256, 104, 184)   => res2_1_branch2c_bn          : (2, 256, 104, 184)   ------- (op: AffineChannel)
+INFO net.py: 250: res2_1_branch2c_bn          : (2, 256, 104, 184)   => res2_1_branch2c_bn          : (2, 256, 104, 184)   ------- (op: Sum)
+INFO net.py: 250: res2_0_branch2c_bn          : (2, 256, 104, 184)   => res2_1_branch2c_bn          : (2, 256, 104, 184)   ------|
+INFO net.py: 250: res2_1_branch2c_bn          : (2, 256, 104, 184)   => res2_1_branch2c_bn          : (2, 256, 104, 184)   ------- (op: Relu)
+INFO net.py: 250: res2_1_branch2c_bn          : (2, 256, 104, 184)   => res2_2_branch2a             : (2, 64, 104, 184)    ------- (op: Conv)
+INFO net.py: 250: res2_2_branch2a             : (2, 64, 104, 184)    => res2_2_branch2a             : (2, 64, 104, 184)    ------- (op: AffineChannel)
+INFO net.py: 250: res2_2_branch2a             : (2, 64, 104, 184)    => res2_2_branch2a             : (2, 64, 104, 184)    ------- (op: Relu)
+INFO net.py: 250: res2_2_branch2a             : (2, 64, 104, 184)    => res2_2_branch2b             : (2, 64, 104, 184)    ------- (op: Conv)
+INFO net.py: 250: res2_2_branch2b             : (2, 64, 104, 184)    => res2_2_branch2b             : (2, 64, 104, 184)    ------- (op: AffineChannel)
+INFO net.py: 250: res2_2_branch2b             : (2, 64, 104, 184)    => res2_2_branch2b             : (2, 64, 104, 184)    ------- (op: Relu)
+INFO net.py: 250: res2_2_branch2b             : (2, 64, 104, 184)    => res2_2_branch2c             : (2, 256, 104, 184)   ------- (op: Conv)
+INFO net.py: 250: res2_2_branch2c             : (2, 256, 104, 184)   => res2_2_branch2c_bn          : (2, 256, 104, 184)   ------- (op: AffineChannel)
+INFO net.py: 250: res2_2_branch2c_bn          : (2, 256, 104, 184)   => res2_2_sum                  : (2, 256, 104, 184)   ------- (op: Sum)
+INFO net.py: 250: res2_1_branch2c_bn          : (2, 256, 104, 184)   => res2_2_sum                  : (2, 256, 104, 184)   ------|
+INFO net.py: 250: res2_2_sum                  : (2, 256, 104, 184)   => res2_2_sum                  : (2, 256, 104, 184)   ------- (op: Relu)
+INFO net.py: 250: res2_2_sum                  : (2, 256, 104, 184)   => res2_2_sum                  : (2, 256, 104, 184)   ------- (op: StopGradient)
+INFO net.py: 250: res2_2_sum                  : (2, 256, 104, 184)   => res3_0_branch2a             : (2, 128, 52, 92)     ------- (op: Conv)
+INFO net.py: 250: res3_0_branch2a             : (2, 128, 52, 92)     => res3_0_branch2a             : (2, 128, 52, 92)     ------- (op: AffineChannel)
+INFO net.py: 250: res3_0_branch2a             : (2, 128, 52, 92)     => res3_0_branch2a             : (2, 128, 52, 92)     ------- (op: Relu)
+INFO net.py: 250: res3_0_branch2a             : (2, 128, 52, 92)     => res3_0_branch2b             : (2, 128, 52, 92)     ------- (op: Conv)
+INFO net.py: 250: res3_0_branch2b             : (2, 128, 52, 92)     => res3_0_branch2b             : (2, 128, 52, 92)     ------- (op: AffineChannel)
+INFO net.py: 250: res3_0_branch2b             : (2, 128, 52, 92)     => res3_0_branch2b             : (2, 128, 52, 92)     ------- (op: Relu)
+INFO net.py: 250: res3_0_branch2b             : (2, 128, 52, 92)     => res3_0_branch2c             : (2, 512, 52, 92)     ------- (op: Conv)
+INFO net.py: 250: res3_0_branch2c             : (2, 512, 52, 92)     => res3_0_branch2c_bn          : (2, 512, 52, 92)     ------- (op: AffineChannel)
+INFO net.py: 250: res2_2_sum                  : (2, 256, 104, 184)   => res3_0_branch1              : (2, 512, 52, 92)     ------- (op: Conv)
+INFO net.py: 250: res3_0_branch1              : (2, 512, 52, 92)     => res3_0_branch1_bn           : (2, 512, 52, 92)     ------- (op: AffineChannel)
+INFO net.py: 250: res3_0_branch2c_bn          : (2, 512, 52, 92)     => res3_0_branch2c_bn          : (2, 512, 52, 92)     ------- (op: Sum)
+INFO net.py: 250: res3_0_branch1_bn           : (2, 512, 52, 92)     => res3_0_branch2c_bn          : (2, 512, 52, 92)     ------|
+INFO net.py: 250: res3_0_branch2c_bn          : (2, 512, 52, 92)     => res3_0_branch2c_bn          : (2, 512, 52, 92)     ------- (op: Relu)
+INFO net.py: 250: res3_0_branch2c_bn          : (2, 512, 52, 92)     => res3_1_branch2a             : (2, 128, 52, 92)     ------- (op: Conv)
+INFO net.py: 250: res3_1_branch2a             : (2, 128, 52, 92)     => res3_1_branch2a             : (2, 128, 52, 92)     ------- (op: AffineChannel)
+INFO net.py: 250: res3_1_branch2a             : (2, 128, 52, 92)     => res3_1_branch2a             : (2, 128, 52, 92)     ------- (op: Relu)
+INFO net.py: 250: res3_1_branch2a             : (2, 128, 52, 92)     => res3_1_branch2b             : (2, 128, 52, 92)     ------- (op: Conv)
+INFO net.py: 250: res3_1_branch2b             : (2, 128, 52, 92)     => res3_1_branch2b             : (2, 128, 52, 92)     ------- (op: AffineChannel)
+INFO net.py: 250: res3_1_branch2b             : (2, 128, 52, 92)     => res3_1_branch2b             : (2, 128, 52, 92)     ------- (op: Relu)
+INFO net.py: 250: res3_1_branch2b             : (2, 128, 52, 92)     => res3_1_branch2c             : (2, 512, 52, 92)     ------- (op: Conv)
+INFO net.py: 250: res3_1_branch2c             : (2, 512, 52, 92)     => res3_1_branch2c_bn          : (2, 512, 52, 92)     ------- (op: AffineChannel)
+INFO net.py: 250: res3_1_branch2c_bn          : (2, 512, 52, 92)     => res3_1_branch2c_bn          : (2, 512, 52, 92)     ------- (op: Sum)
+INFO net.py: 250: res3_0_branch2c_bn          : (2, 512, 52, 92)     => res3_1_branch2c_bn          : (2, 512, 52, 92)     ------|
+INFO net.py: 250: res3_1_branch2c_bn          : (2, 512, 52, 92)     => res3_1_branch2c_bn          : (2, 512, 52, 92)     ------- (op: Relu)
+INFO net.py: 250: res3_1_branch2c_bn          : (2, 512, 52, 92)     => res3_2_branch2a             : (2, 128, 52, 92)     ------- (op: Conv)
+INFO net.py: 250: res3_2_branch2a             : (2, 128, 52, 92)     => res3_2_branch2a             : (2, 128, 52, 92)     ------- (op: AffineChannel)
+INFO net.py: 250: res3_2_branch2a             : (2, 128, 52, 92)     => res3_2_branch2a             : (2, 128, 52, 92)     ------- (op: Relu)
+INFO net.py: 250: res3_2_branch2a             : (2, 128, 52, 92)     => res3_2_branch2b             : (2, 128, 52, 92)     ------- (op: Conv)
+INFO net.py: 250: res3_2_branch2b             : (2, 128, 52, 92)     => res3_2_branch2b             : (2, 128, 52, 92)     ------- (op: AffineChannel)
+INFO net.py: 250: res3_2_branch2b             : (2, 128, 52, 92)     => res3_2_branch2b             : (2, 128, 52, 92)     ------- (op: Relu)
+INFO net.py: 250: res3_2_branch2b             : (2, 128, 52, 92)     => res3_2_branch2c             : (2, 512, 52, 92)     ------- (op: Conv)
+INFO net.py: 250: res3_2_branch2c             : (2, 512, 52, 92)     => res3_2_branch2c_bn          : (2, 512, 52, 92)     ------- (op: AffineChannel)
+INFO net.py: 250: res3_2_branch2c_bn          : (2, 512, 52, 92)     => res3_2_branch2c_bn          : (2, 512, 52, 92)     ------- (op: Sum)
+INFO net.py: 250: res3_1_branch2c_bn          : (2, 512, 52, 92)     => res3_2_branch2c_bn          : (2, 512, 52, 92)     ------|
+INFO net.py: 250: res3_2_branch2c_bn          : (2, 512, 52, 92)     => res3_2_branch2c_bn          : (2, 512, 52, 92)     ------- (op: Relu)
+INFO net.py: 250: res3_2_branch2c_bn          : (2, 512, 52, 92)     => res3_3_branch2a             : (2, 128, 52, 92)     ------- (op: Conv)
+INFO net.py: 250: res3_3_branch2a             : (2, 128, 52, 92)     => res3_3_branch2a             : (2, 128, 52, 92)     ------- (op: AffineChannel)
+INFO net.py: 250: res3_3_branch2a             : (2, 128, 52, 92)     => res3_3_branch2a             : (2, 128, 52, 92)     ------- (op: Relu)
+INFO net.py: 250: res3_3_branch2a             : (2, 128, 52, 92)     => res3_3_branch2b             : (2, 128, 52, 92)     ------- (op: Conv)
+INFO net.py: 250: res3_3_branch2b             : (2, 128, 52, 92)     => res3_3_branch2b             : (2, 128, 52, 92)     ------- (op: AffineChannel)
+INFO net.py: 250: res3_3_branch2b             : (2, 128, 52, 92)     => res3_3_branch2b             : (2, 128, 52, 92)     ------- (op: Relu)
+INFO net.py: 250: res3_3_branch2b             : (2, 128, 52, 92)     => res3_3_branch2c             : (2, 512, 52, 92)     ------- (op: Conv)
+INFO net.py: 250: res3_3_branch2c             : (2, 512, 52, 92)     => res3_3_branch2c_bn          : (2, 512, 52, 92)     ------- (op: AffineChannel)
+INFO net.py: 250: res3_3_branch2c_bn          : (2, 512, 52, 92)     => res3_3_sum                  : (2, 512, 52, 92)     ------- (op: Sum)
+INFO net.py: 250: res3_2_branch2c_bn          : (2, 512, 52, 92)     => res3_3_sum                  : (2, 512, 52, 92)     ------|
+INFO net.py: 250: res3_3_sum                  : (2, 512, 52, 92)     => res3_3_sum                  : (2, 512, 52, 92)     ------- (op: Relu)
+INFO net.py: 250: res3_3_sum                  : (2, 512, 52, 92)     => res4_0_branch2a             : (2, 256, 26, 46)     ------- (op: Conv)
+INFO net.py: 250: res4_0_branch2a             : (2, 256, 26, 46)     => res4_0_branch2a             : (2, 256, 26, 46)     ------- (op: AffineChannel)
+INFO net.py: 250: res4_0_branch2a             : (2, 256, 26, 46)     => res4_0_branch2a             : (2, 256, 26, 46)     ------- (op: Relu)
+INFO net.py: 250: res4_0_branch2a             : (2, 256, 26, 46)     => res4_0_branch2b             : (2, 256, 26, 46)     ------- (op: Conv)
+INFO net.py: 250: res4_0_branch2b             : (2, 256, 26, 46)     => res4_0_branch2b             : (2, 256, 26, 46)     ------- (op: AffineChannel)
+INFO net.py: 250: res4_0_branch2b             : (2, 256, 26, 46)     => res4_0_branch2b             : (2, 256, 26, 46)     ------- (op: Relu)
+INFO net.py: 250: res4_0_branch2b             : (2, 256, 26, 46)     => res4_0_branch2c             : (2, 1024, 26, 46)    ------- (op: Conv)
+INFO net.py: 250: res4_0_branch2c             : (2, 1024, 26, 46)    => res4_0_branch2c_bn          : (2, 1024, 26, 46)    ------- (op: AffineChannel)
+INFO net.py: 250: res3_3_sum                  : (2, 512, 52, 92)     => res4_0_branch1              : (2, 1024, 26, 46)    ------- (op: Conv)
+INFO net.py: 250: res4_0_branch1              : (2, 1024, 26, 46)    => res4_0_branch1_bn           : (2, 1024, 26, 46)    ------- (op: AffineChannel)
+INFO net.py: 250: res4_0_branch2c_bn          : (2, 1024, 26, 46)    => res4_0_branch2c_bn          : (2, 1024, 26, 46)    ------- (op: Sum)
+INFO net.py: 250: res4_0_branch1_bn           : (2, 1024, 26, 46)    => res4_0_branch2c_bn          : (2, 1024, 26, 46)    ------|
+INFO net.py: 250: res4_0_branch2c_bn          : (2, 1024, 26, 46)    => res4_0_branch2c_bn          : (2, 1024, 26, 46)    ------- (op: Relu)
+INFO net.py: 250: res4_0_branch2c_bn          : (2, 1024, 26, 46)    => res4_1_branch2a             : (2, 256, 26, 46)     ------- (op: Conv)
+INFO net.py: 250: res4_1_branch2a             : (2, 256, 26, 46)     => res4_1_branch2a             : (2, 256, 26, 46)     ------- (op: AffineChannel)
+INFO net.py: 250: res4_1_branch2a             : (2, 256, 26, 46)     => res4_1_branch2a             : (2, 256, 26, 46)     ------- (op: Relu)
+INFO net.py: 250: res4_1_branch2a             : (2, 256, 26, 46)     => res4_1_branch2b             : (2, 256, 26, 46)     ------- (op: Conv)
+INFO net.py: 250: res4_1_branch2b             : (2, 256, 26, 46)     => res4_1_branch2b             : (2, 256, 26, 46)     ------- (op: AffineChannel)
+INFO net.py: 250: res4_1_branch2b             : (2, 256, 26, 46)     => res4_1_branch2b             : (2, 256, 26, 46)     ------- (op: Relu)
+INFO net.py: 250: res4_1_branch2b             : (2, 256, 26, 46)     => res4_1_branch2c             : (2, 1024, 26, 46)    ------- (op: Conv)
+INFO net.py: 250: res4_1_branch2c             : (2, 1024, 26, 46)    => res4_1_branch2c_bn          : (2, 1024, 26, 46)    ------- (op: AffineChannel)
+INFO net.py: 250: res4_1_branch2c_bn          : (2, 1024, 26, 46)    => res4_1_branch2c_bn          : (2, 1024, 26, 46)    ------- (op: Sum)
+INFO net.py: 250: res4_0_branch2c_bn          : (2, 1024, 26, 46)    => res4_1_branch2c_bn          : (2, 1024, 26, 46)    ------|
+INFO net.py: 250: res4_1_branch2c_bn          : (2, 1024, 26, 46)    => res4_1_branch2c_bn          : (2, 1024, 26, 46)    ------- (op: Relu)
+INFO net.py: 250: res4_1_branch2c_bn          : (2, 1024, 26, 46)    => res4_2_branch2a             : (2, 256, 26, 46)     ------- (op: Conv)
+INFO net.py: 250: res4_2_branch2a             : (2, 256, 26, 46)     => res4_2_branch2a             : (2, 256, 26, 46)     ------- (op: AffineChannel)
+INFO net.py: 250: res4_2_branch2a             : (2, 256, 26, 46)     => res4_2_branch2a             : (2, 256, 26, 46)     ------- (op: Relu)
+INFO net.py: 250: res4_2_branch2a             : (2, 256, 26, 46)     => res4_2_branch2b             : (2, 256, 26, 46)     ------- (op: Conv)
+INFO net.py: 250: res4_2_branch2b             : (2, 256, 26, 46)     => res4_2_branch2b             : (2, 256, 26, 46)     ------- (op: AffineChannel)
+INFO net.py: 250: res4_2_branch2b             : (2, 256, 26, 46)     => res4_2_branch2b             : (2, 256, 26, 46)     ------- (op: Relu)
+INFO net.py: 250: res4_2_branch2b             : (2, 256, 26, 46)     => res4_2_branch2c             : (2, 1024, 26, 46)    ------- (op: Conv)
+INFO net.py: 250: res4_2_branch2c             : (2, 1024, 26, 46)    => res4_2_branch2c_bn          : (2, 1024, 26, 46)    ------- (op: AffineChannel)
+INFO net.py: 250: res4_2_branch2c_bn          : (2, 1024, 26, 46)    => res4_2_branch2c_bn          : (2, 1024, 26, 46)    ------- (op: Sum)
+INFO net.py: 250: res4_1_branch2c_bn          : (2, 1024, 26, 46)    => res4_2_branch2c_bn          : (2, 1024, 26, 46)    ------|
+INFO net.py: 250: res4_2_branch2c_bn          : (2, 1024, 26, 46)    => res4_2_branch2c_bn          : (2, 1024, 26, 46)    ------- (op: Relu)
+INFO net.py: 250: res4_2_branch2c_bn          : (2, 1024, 26, 46)    => res4_3_branch2a             : (2, 256, 26, 46)     ------- (op: Conv)
+INFO net.py: 250: res4_3_branch2a             : (2, 256, 26, 46)     => res4_3_branch2a             : (2, 256, 26, 46)     ------- (op: AffineChannel)
+INFO net.py: 250: res4_3_branch2a             : (2, 256, 26, 46)     => res4_3_branch2a             : (2, 256, 26, 46)     ------- (op: Relu)
+INFO net.py: 250: res4_3_branch2a             : (2, 256, 26, 46)     => res4_3_branch2b             : (2, 256, 26, 46)     ------- (op: Conv)
+INFO net.py: 250: res4_3_branch2b             : (2, 256, 26, 46)     => res4_3_branch2b             : (2, 256, 26, 46)     ------- (op: AffineChannel)
+INFO net.py: 250: res4_3_branch2b             : (2, 256, 26, 46)     => res4_3_branch2b             : (2, 256, 26, 46)     ------- (op: Relu)
+INFO net.py: 250: res4_3_branch2b             : (2, 256, 26, 46)     => res4_3_branch2c             : (2, 1024, 26, 46)    ------- (op: Conv)
+INFO net.py: 250: res4_3_branch2c             : (2, 1024, 26, 46)    => res4_3_branch2c_bn          : (2, 1024, 26, 46)    ------- (op: AffineChannel)
+INFO net.py: 250: res4_3_branch2c_bn          : (2, 1024, 26, 46)    => res4_3_branch2c_bn          : (2, 1024, 26, 46)    ------- (op: Sum)
+INFO net.py: 250: res4_2_branch2c_bn          : (2, 1024, 26, 46)    => res4_3_branch2c_bn          : (2, 1024, 26, 46)    ------|
+INFO net.py: 250: res4_3_branch2c_bn          : (2, 1024, 26, 46)    => res4_3_branch2c_bn          : (2, 1024, 26, 46)    ------- (op: Relu)
+INFO net.py: 250: res4_3_branch2c_bn          : (2, 1024, 26, 46)    => res4_4_branch2a             : (2, 256, 26, 46)     ------- (op: Conv)
+INFO net.py: 250: res4_4_branch2a             : (2, 256, 26, 46)     => res4_4_branch2a             : (2, 256, 26, 46)     ------- (op: AffineChannel)
+INFO net.py: 250: res4_4_branch2a             : (2, 256, 26, 46)     => res4_4_branch2a             : (2, 256, 26, 46)     ------- (op: Relu)
+INFO net.py: 250: res4_4_branch2a             : (2, 256, 26, 46)     => res4_4_branch2b             : (2, 256, 26, 46)     ------- (op: Conv)
+INFO net.py: 250: res4_4_branch2b             : (2, 256, 26, 46)     => res4_4_branch2b             : (2, 256, 26, 46)     ------- (op: AffineChannel)
+INFO net.py: 250: res4_4_branch2b             : (2, 256, 26, 46)     => res4_4_branch2b             : (2, 256, 26, 46)     ------- (op: Relu)
+INFO net.py: 250: res4_4_branch2b             : (2, 256, 26, 46)     => res4_4_branch2c             : (2, 1024, 26, 46)    ------- (op: Conv)
+INFO net.py: 250: res4_4_branch2c             : (2, 1024, 26, 46)    => res4_4_branch2c_bn          : (2, 1024, 26, 46)    ------- (op: AffineChannel)
+INFO net.py: 250: res4_4_branch2c_bn          : (2, 1024, 26, 46)    => res4_4_branch2c_bn          : (2, 1024, 26, 46)    ------- (op: Sum)
+INFO net.py: 250: res4_3_branch2c_bn          : (2, 1024, 26, 46)    => res4_4_branch2c_bn          : (2, 1024, 26, 46)    ------|
+INFO net.py: 250: res4_4_branch2c_bn          : (2, 1024, 26, 46)    => res4_4_branch2c_bn          : (2, 1024, 26, 46)    ------- (op: Relu)
+INFO net.py: 250: res4_4_branch2c_bn          : (2, 1024, 26, 46)    => res4_5_branch2a             : (2, 256, 26, 46)     ------- (op: Conv)
+INFO net.py: 250: res4_5_branch2a             : (2, 256, 26, 46)     => res4_5_branch2a             : (2, 256, 26, 46)     ------- (op: AffineChannel)
+INFO net.py: 250: res4_5_branch2a             : (2, 256, 26, 46)     => res4_5_branch2a             : (2, 256, 26, 46)     ------- (op: Relu)
+INFO net.py: 250: res4_5_branch2a             : (2, 256, 26, 46)     => res4_5_branch2b             : (2, 256, 26, 46)     ------- (op: Conv)
+INFO net.py: 250: res4_5_branch2b             : (2, 256, 26, 46)     => res4_5_branch2b             : (2, 256, 26, 46)     ------- (op: AffineChannel)
+INFO net.py: 250: res4_5_branch2b             : (2, 256, 26, 46)     => res4_5_branch2b             : (2, 256, 26, 46)     ------- (op: Relu)
+INFO net.py: 250: res4_5_branch2b             : (2, 256, 26, 46)     => res4_5_branch2c             : (2, 1024, 26, 46)    ------- (op: Conv)
+INFO net.py: 250: res4_5_branch2c             : (2, 1024, 26, 46)    => res4_5_branch2c_bn          : (2, 1024, 26, 46)    ------- (op: AffineChannel)
+INFO net.py: 250: res4_5_branch2c_bn          : (2, 1024, 26, 46)    => res4_5_sum                  : (2, 1024, 26, 46)    ------- (op: Sum)
+INFO net.py: 250: res4_4_branch2c_bn          : (2, 1024, 26, 46)    => res4_5_sum                  : (2, 1024, 26, 46)    ------|
+INFO net.py: 250: res4_5_sum                  : (2, 1024, 26, 46)    => res4_5_sum                  : (2, 1024, 26, 46)    ------- (op: Relu)
+INFO net.py: 250: res4_5_sum                  : (2, 1024, 26, 46)    => res5_0_branch2a             : (2, 512, 13, 23)     ------- (op: Conv)
+INFO net.py: 250: res5_0_branch2a             : (2, 512, 13, 23)     => res5_0_branch2a             : (2, 512, 13, 23)     ------- (op: AffineChannel)
+INFO net.py: 250: res5_0_branch2a             : (2, 512, 13, 23)     => res5_0_branch2a             : (2, 512, 13, 23)     ------- (op: Relu)
+INFO net.py: 250: res5_0_branch2a             : (2, 512, 13, 23)     => res5_0_branch2b             : (2, 512, 13, 23)     ------- (op: Conv)
+INFO net.py: 250: res5_0_branch2b             : (2, 512, 13, 23)     => res5_0_branch2b             : (2, 512, 13, 23)     ------- (op: AffineChannel)
+INFO net.py: 250: res5_0_branch2b             : (2, 512, 13, 23)     => res5_0_branch2b             : (2, 512, 13, 23)     ------- (op: Relu)
+INFO net.py: 250: res5_0_branch2b             : (2, 512, 13, 23)     => res5_0_branch2c             : (2, 2048, 13, 23)    ------- (op: Conv)
+INFO net.py: 250: res5_0_branch2c             : (2, 2048, 13, 23)    => res5_0_branch2c_bn          : (2, 2048, 13, 23)    ------- (op: AffineChannel)
+INFO net.py: 250: res4_5_sum                  : (2, 1024, 26, 46)    => res5_0_branch1              : (2, 2048, 13, 23)    ------- (op: Conv)
+INFO net.py: 250: res5_0_branch1              : (2, 2048, 13, 23)    => res5_0_branch1_bn           : (2, 2048, 13, 23)    ------- (op: AffineChannel)
+INFO net.py: 250: res5_0_branch2c_bn          : (2, 2048, 13, 23)    => res5_0_branch2c_bn          : (2, 2048, 13, 23)    ------- (op: Sum)
+INFO net.py: 250: res5_0_branch1_bn           : (2, 2048, 13, 23)    => res5_0_branch2c_bn          : (2, 2048, 13, 23)    ------|
+INFO net.py: 250: res5_0_branch2c_bn          : (2, 2048, 13, 23)    => res5_0_branch2c_bn          : (2, 2048, 13, 23)    ------- (op: Relu)
+INFO net.py: 250: res5_0_branch2c_bn          : (2, 2048, 13, 23)    => res5_1_branch2a             : (2, 512, 13, 23)     ------- (op: Conv)
+INFO net.py: 250: res5_1_branch2a             : (2, 512, 13, 23)     => res5_1_branch2a             : (2, 512, 13, 23)     ------- (op: AffineChannel)
+INFO net.py: 250: res5_1_branch2a             : (2, 512, 13, 23)     => res5_1_branch2a             : (2, 512, 13, 23)     ------- (op: Relu)
+INFO net.py: 250: res5_1_branch2a             : (2, 512, 13, 23)     => res5_1_branch2b             : (2, 512, 13, 23)     ------- (op: Conv)
+INFO net.py: 250: res5_1_branch2b             : (2, 512, 13, 23)     => res5_1_branch2b             : (2, 512, 13, 23)     ------- (op: AffineChannel)
+INFO net.py: 250: res5_1_branch2b             : (2, 512, 13, 23)     => res5_1_branch2b             : (2, 512, 13, 23)     ------- (op: Relu)
+INFO net.py: 250: res5_1_branch2b             : (2, 512, 13, 23)     => res5_1_branch2c             : (2, 2048, 13, 23)    ------- (op: Conv)
+INFO net.py: 250: res5_1_branch2c             : (2, 2048, 13, 23)    => res5_1_branch2c_bn          : (2, 2048, 13, 23)    ------- (op: AffineChannel)
+INFO net.py: 250: res5_1_branch2c_bn          : (2, 2048, 13, 23)    => res5_1_branch2c_bn          : (2, 2048, 13, 23)    ------- (op: Sum)
+INFO net.py: 250: res5_0_branch2c_bn          : (2, 2048, 13, 23)    => res5_1_branch2c_bn          : (2, 2048, 13, 23)    ------|
+INFO net.py: 250: res5_1_branch2c_bn          : (2, 2048, 13, 23)    => res5_1_branch2c_bn          : (2, 2048, 13, 23)    ------- (op: Relu)
+INFO net.py: 250: res5_1_branch2c_bn          : (2, 2048, 13, 23)    => res5_2_branch2a             : (2, 512, 13, 23)     ------- (op: Conv)
+INFO net.py: 250: res5_2_branch2a             : (2, 512, 13, 23)     => res5_2_branch2a             : (2, 512, 13, 23)     ------- (op: AffineChannel)
+INFO net.py: 250: res5_2_branch2a             : (2, 512, 13, 23)     => res5_2_branch2a             : (2, 512, 13, 23)     ------- (op: Relu)
+INFO net.py: 250: res5_2_branch2a             : (2, 512, 13, 23)     => res5_2_branch2b             : (2, 512, 13, 23)     ------- (op: Conv)
+INFO net.py: 250: res5_2_branch2b             : (2, 512, 13, 23)     => res5_2_branch2b             : (2, 512, 13, 23)     ------- (op: AffineChannel)
+INFO net.py: 250: res5_2_branch2b             : (2, 512, 13, 23)     => res5_2_branch2b             : (2, 512, 13, 23)     ------- (op: Relu)
+INFO net.py: 250: res5_2_branch2b             : (2, 512, 13, 23)     => res5_2_branch2c             : (2, 2048, 13, 23)    ------- (op: Conv)
+INFO net.py: 250: res5_2_branch2c             : (2, 2048, 13, 23)    => res5_2_branch2c_bn          : (2, 2048, 13, 23)    ------- (op: AffineChannel)
+INFO net.py: 250: res5_2_branch2c_bn          : (2, 2048, 13, 23)    => res5_2_sum                  : (2, 2048, 13, 23)    ------- (op: Sum)
+INFO net.py: 250: res5_1_branch2c_bn          : (2, 2048, 13, 23)    => res5_2_sum                  : (2, 2048, 13, 23)    ------|
+INFO net.py: 250: res5_2_sum                  : (2, 2048, 13, 23)    => res5_2_sum                  : (2, 2048, 13, 23)    ------- (op: Relu)
+INFO net.py: 250: res5_2_sum                  : (2, 2048, 13, 23)    => fpn_inner_res5_2_sum        : (2, 256, 13, 23)     ------- (op: Conv)
+INFO net.py: 250: res4_5_sum                  : (2, 1024, 26, 46)    => fpn_inner_res4_5_sum_lateral: (2, 256, 26, 46)     ------- (op: Conv)
+INFO net.py: 250: fpn_inner_res5_2_sum        : (2, 256, 13, 23)     => fpn_inner_res4_5_sum_topdown: (2, 256, 26, 46)     ------- (op: UpsampleNearest)
+INFO net.py: 250: fpn_inner_res4_5_sum_lateral: (2, 256, 26, 46)     => fpn_inner_res4_5_sum        : (2, 256, 26, 46)     ------- (op: Sum)
+INFO net.py: 250: fpn_inner_res4_5_sum_topdown: (2, 256, 26, 46)     => fpn_inner_res4_5_sum        : (2, 256, 26, 46)     ------|
+INFO net.py: 250: res3_3_sum                  : (2, 512, 52, 92)     => fpn_inner_res3_3_sum_lateral: (2, 256, 52, 92)     ------- (op: Conv)
+INFO net.py: 250: fpn_inner_res4_5_sum        : (2, 256, 26, 46)     => fpn_inner_res3_3_sum_topdown: (2, 256, 52, 92)     ------- (op: UpsampleNearest)
+INFO net.py: 250: fpn_inner_res3_3_sum_lateral: (2, 256, 52, 92)     => fpn_inner_res3_3_sum        : (2, 256, 52, 92)     ------- (op: Sum)
+INFO net.py: 250: fpn_inner_res3_3_sum_topdown: (2, 256, 52, 92)     => fpn_inner_res3_3_sum        : (2, 256, 52, 92)     ------|
+INFO net.py: 250: fpn_inner_res5_2_sum        : (2, 256, 13, 23)     => fpn_res5_2_sum              : (2, 256, 13, 23)     ------- (op: Conv)
+INFO net.py: 250: fpn_inner_res4_5_sum        : (2, 256, 26, 46)     => fpn_res4_5_sum              : (2, 256, 26, 46)     ------- (op: Conv)
+INFO net.py: 250: fpn_inner_res3_3_sum        : (2, 256, 52, 92)     => fpn_res3_3_sum              : (2, 256, 52, 92)     ------- (op: Conv)
+INFO net.py: 250: fpn_res3_3_sum              : (2, 256, 52, 92)     => retnet_cls_conv_n0_fpn3     : (2, 256, 52, 92)     ------- (op: Conv)
+INFO net.py: 250: retnet_cls_conv_n0_fpn3     : (2, 256, 52, 92)     => retnet_cls_conv_n0_fpn3     : (2, 256, 52, 92)     ------- (op: Relu)
+INFO net.py: 250: retnet_cls_conv_n0_fpn3     : (2, 256, 52, 92)     => retnet_cls_conv_n1_fpn3     : (2, 256, 52, 92)     ------- (op: Conv)
+INFO net.py: 250: retnet_cls_conv_n1_fpn3     : (2, 256, 52, 92)     => retnet_cls_conv_n1_fpn3     : (2, 256, 52, 92)     ------- (op: Relu)
+INFO net.py: 250: retnet_cls_conv_n1_fpn3     : (2, 256, 52, 92)     => retnet_cls_conv_n2_fpn3     : (2, 256, 52, 92)     ------- (op: Conv)
+INFO net.py: 250: retnet_cls_conv_n2_fpn3     : (2, 256, 52, 92)     => retnet_cls_conv_n2_fpn3     : (2, 256, 52, 92)     ------- (op: Relu)
+INFO net.py: 250: retnet_cls_conv_n2_fpn3     : (2, 256, 52, 92)     => retnet_cls_conv_n3_fpn3     : (2, 256, 52, 92)     ------- (op: Conv)
+INFO net.py: 250: retnet_cls_conv_n3_fpn3     : (2, 256, 52, 92)     => retnet_cls_conv_n3_fpn3     : (2, 256, 52, 92)     ------- (op: Relu)
+INFO net.py: 250: retnet_cls_conv_n3_fpn3     : (2, 256, 52, 92)     => retnet_cls_pred_fpn3        : (2, 9, 52, 92)       ------- (op: Conv)
+INFO net.py: 250: fpn_res4_5_sum              : (2, 256, 26, 46)     => retnet_cls_conv_n0_fpn4     : (2, 256, 26, 46)     ------- (op: Conv)
+INFO net.py: 250: retnet_cls_conv_n0_fpn4     : (2, 256, 26, 46)     => retnet_cls_conv_n0_fpn4     : (2, 256, 26, 46)     ------- (op: Relu)
+INFO net.py: 250: retnet_cls_conv_n0_fpn4     : (2, 256, 26, 46)     => retnet_cls_conv_n1_fpn4     : (2, 256, 26, 46)     ------- (op: Conv)
+INFO net.py: 250: retnet_cls_conv_n1_fpn4     : (2, 256, 26, 46)     => retnet_cls_conv_n1_fpn4     : (2, 256, 26, 46)     ------- (op: Relu)
+INFO net.py: 250: retnet_cls_conv_n1_fpn4     : (2, 256, 26, 46)     => retnet_cls_conv_n2_fpn4     : (2, 256, 26, 46)     ------- (op: Conv)
+INFO net.py: 250: retnet_cls_conv_n2_fpn4     : (2, 256, 26, 46)     => retnet_cls_conv_n2_fpn4     : (2, 256, 26, 46)     ------- (op: Relu)
+INFO net.py: 250: retnet_cls_conv_n2_fpn4     : (2, 256, 26, 46)     => retnet_cls_conv_n3_fpn4     : (2, 256, 26, 46)     ------- (op: Conv)
+INFO net.py: 250: retnet_cls_conv_n3_fpn4     : (2, 256, 26, 46)     => retnet_cls_conv_n3_fpn4     : (2, 256, 26, 46)     ------- (op: Relu)
+INFO net.py: 250: retnet_cls_conv_n3_fpn4     : (2, 256, 26, 46)     => retnet_cls_pred_fpn4        : (2, 9, 26, 46)       ------- (op: Conv)
+INFO net.py: 250: fpn_res5_2_sum              : (2, 256, 13, 23)     => retnet_cls_conv_n0_fpn5     : (2, 256, 13, 23)     ------- (op: Conv)
+INFO net.py: 250: retnet_cls_conv_n0_fpn5     : (2, 256, 13, 23)     => retnet_cls_conv_n0_fpn5     : (2, 256, 13, 23)     ------- (op: Relu)
+INFO net.py: 250: retnet_cls_conv_n0_fpn5     : (2, 256, 13, 23)     => retnet_cls_conv_n1_fpn5     : (2, 256, 13, 23)     ------- (op: Conv)
+INFO net.py: 250: retnet_cls_conv_n1_fpn5     : (2, 256, 13, 23)     => retnet_cls_conv_n1_fpn5     : (2, 256, 13, 23)     ------- (op: Relu)
+INFO net.py: 250: retnet_cls_conv_n1_fpn5     : (2, 256, 13, 23)     => retnet_cls_conv_n2_fpn5     : (2, 256, 13, 23)     ------- (op: Conv)
+INFO net.py: 250: retnet_cls_conv_n2_fpn5     : (2, 256, 13, 23)     => retnet_cls_conv_n2_fpn5     : (2, 256, 13, 23)     ------- (op: Relu)
+INFO net.py: 250: retnet_cls_conv_n2_fpn5     : (2, 256, 13, 23)     => retnet_cls_conv_n3_fpn5     : (2, 256, 13, 23)     ------- (op: Conv)
+INFO net.py: 250: retnet_cls_conv_n3_fpn5     : (2, 256, 13, 23)     => retnet_cls_conv_n3_fpn5     : (2, 256, 13, 23)     ------- (op: Relu)
+INFO net.py: 250: retnet_cls_conv_n3_fpn5     : (2, 256, 13, 23)     => retnet_cls_pred_fpn5        : (2, 9, 13, 23)       ------- (op: Conv)
+INFO net.py: 250: fpn_res3_3_sum              : (2, 256, 52, 92)     => retnet_bbox_conv_n0_fpn3    : (2, 256, 52, 92)     ------- (op: Conv)
+INFO net.py: 250: retnet_bbox_conv_n0_fpn3    : (2, 256, 52, 92)     => retnet_bbox_conv_n0_fpn3    : (2, 256, 52, 92)     ------- (op: Relu)
+INFO net.py: 250: retnet_bbox_conv_n0_fpn3    : (2, 256, 52, 92)     => retnet_bbox_conv_n1_fpn3    : (2, 256, 52, 92)     ------- (op: Conv)
+INFO net.py: 250: retnet_bbox_conv_n1_fpn3    : (2, 256, 52, 92)     => retnet_bbox_conv_n1_fpn3    : (2, 256, 52, 92)     ------- (op: Relu)
+INFO net.py: 250: retnet_bbox_conv_n1_fpn3    : (2, 256, 52, 92)     => retnet_bbox_conv_n2_fpn3    : (2, 256, 52, 92)     ------- (op: Conv)
+INFO net.py: 250: retnet_bbox_conv_n2_fpn3    : (2, 256, 52, 92)     => retnet_bbox_conv_n2_fpn3    : (2, 256, 52, 92)     ------- (op: Relu)
+INFO net.py: 250: retnet_bbox_conv_n2_fpn3    : (2, 256, 52, 92)     => retnet_bbox_conv_n3_fpn3    : (2, 256, 52, 92)     ------- (op: Conv)
+INFO net.py: 250: retnet_bbox_conv_n3_fpn3    : (2, 256, 52, 92)     => retnet_bbox_conv_n3_fpn3    : (2, 256, 52, 92)     ------- (op: Relu)
+INFO net.py: 250: fpn_res4_5_sum              : (2, 256, 26, 46)     => retnet_bbox_conv_n0_fpn4    : (2, 256, 26, 46)     ------- (op: Conv)
+INFO net.py: 250: retnet_bbox_conv_n0_fpn4    : (2, 256, 26, 46)     => retnet_bbox_conv_n0_fpn4    : (2, 256, 26, 46)     ------- (op: Relu)
+INFO net.py: 250: retnet_bbox_conv_n0_fpn4    : (2, 256, 26, 46)     => retnet_bbox_conv_n1_fpn4    : (2, 256, 26, 46)     ------- (op: Conv)
+INFO net.py: 250: retnet_bbox_conv_n1_fpn4    : (2, 256, 26, 46)     => retnet_bbox_conv_n1_fpn4    : (2, 256, 26, 46)     ------- (op: Relu)
+INFO net.py: 250: retnet_bbox_conv_n1_fpn4    : (2, 256, 26, 46)     => retnet_bbox_conv_n2_fpn4    : (2, 256, 26, 46)     ------- (op: Conv)
+INFO net.py: 250: retnet_bbox_conv_n2_fpn4    : (2, 256, 26, 46)     => retnet_bbox_conv_n2_fpn4    : (2, 256, 26, 46)     ------- (op: Relu)
+INFO net.py: 250: retnet_bbox_conv_n2_fpn4    : (2, 256, 26, 46)     => retnet_bbox_conv_n3_fpn4    : (2, 256, 26, 46)     ------- (op: Conv)
+INFO net.py: 250: retnet_bbox_conv_n3_fpn4    : (2, 256, 26, 46)     => retnet_bbox_conv_n3_fpn4    : (2, 256, 26, 46)     ------- (op: Relu)
+INFO net.py: 250: fpn_res5_2_sum              : (2, 256, 13, 23)     => retnet_bbox_conv_n0_fpn5    : (2, 256, 13, 23)     ------- (op: Conv)
+INFO net.py: 250: retnet_bbox_conv_n0_fpn5    : (2, 256, 13, 23)     => retnet_bbox_conv_n0_fpn5    : (2, 256, 13, 23)     ------- (op: Relu)
+INFO net.py: 250: retnet_bbox_conv_n0_fpn5    : (2, 256, 13, 23)     => retnet_bbox_conv_n1_fpn5    : (2, 256, 13, 23)     ------- (op: Conv)
+INFO net.py: 250: retnet_bbox_conv_n1_fpn5    : (2, 256, 13, 23)     => retnet_bbox_conv_n1_fpn5    : (2, 256, 13, 23)     ------- (op: Relu)
+INFO net.py: 250: retnet_bbox_conv_n1_fpn5    : (2, 256, 13, 23)     => retnet_bbox_conv_n2_fpn5    : (2, 256, 13, 23)     ------- (op: Conv)
+INFO net.py: 250: retnet_bbox_conv_n2_fpn5    : (2, 256, 13, 23)     => retnet_bbox_conv_n2_fpn5    : (2, 256, 13, 23)     ------- (op: Relu)
+INFO net.py: 250: retnet_bbox_conv_n2_fpn5    : (2, 256, 13, 23)     => retnet_bbox_conv_n3_fpn5    : (2, 256, 13, 23)     ------- (op: Conv)
+INFO net.py: 250: retnet_bbox_conv_n3_fpn5    : (2, 256, 13, 23)     => retnet_bbox_conv_n3_fpn5    : (2, 256, 13, 23)     ------- (op: Relu)
+INFO net.py: 250: retnet_bbox_conv_n3_fpn3    : (2, 256, 52, 92)     => retnet_bbox_pred_fpn3       : (2, 36, 52, 92)      ------- (op: Conv)
+INFO net.py: 250: retnet_bbox_conv_n3_fpn4    : (2, 256, 26, 46)     => retnet_bbox_pred_fpn4       : (2, 36, 26, 46)      ------- (op: Conv)
+INFO net.py: 250: retnet_bbox_conv_n3_fpn5    : (2, 256, 13, 23)     => retnet_bbox_pred_fpn5       : (2, 36, 13, 23)      ------- (op: Conv)
+INFO net.py: 250: retnet_bbox_pred_fpn3       : (2, 36, 52, 92)      => retnet_loss_bbox_fpn3       : ()                   ------- (op: SelectSmoothL1Loss)
+INFO net.py: 250: retnet_roi_bbox_targets_fpn3: (26, 4)              => retnet_loss_bbox_fpn3       : ()                   ------|
+INFO net.py: 250: retnet_roi_fg_bbox_locs_fpn3: (26, 4)              => retnet_loss_bbox_fpn3       : ()                   ------|
+INFO net.py: 250: retnet_fg_num               : (1,)                 => retnet_loss_bbox_fpn3       : ()                   ------|
+INFO net.py: 250: retnet_bbox_pred_fpn4       : (2, 36, 26, 46)      => retnet_loss_bbox_fpn4       : ()                   ------- (op: SelectSmoothL1Loss)
+INFO net.py: 250: retnet_roi_bbox_targets_fpn4: (17, 4)              => retnet_loss_bbox_fpn4       : ()                   ------|
+INFO net.py: 250: retnet_roi_fg_bbox_locs_fpn4: (17, 4)              => retnet_loss_bbox_fpn4       : ()                   ------|
+INFO net.py: 250: retnet_fg_num               : (1,)                 => retnet_loss_bbox_fpn4       : ()                   ------|
+INFO net.py: 250: retnet_bbox_pred_fpn5       : (2, 36, 13, 23)      => retnet_loss_bbox_fpn5       : ()                   ------- (op: SelectSmoothL1Loss)
+INFO net.py: 250: retnet_roi_bbox_targets_fpn5: (5, 4)               => retnet_loss_bbox_fpn5       : ()                   ------|
+INFO net.py: 250: retnet_roi_fg_bbox_locs_fpn5: (5, 4)               => retnet_loss_bbox_fpn5       : ()                   ------|
+INFO net.py: 250: retnet_fg_num               : (1,)                 => retnet_loss_bbox_fpn5       : ()                   ------|
+INFO net.py: 250: retnet_cls_pred_fpn3        : (2, 9, 52, 92)       => fl_fpn3                     : ()                   ------- (op: SigmoidFocalLoss)
+INFO net.py: 250: retnet_cls_labels_fpn3      : (2, 9, 52, 92)       => fl_fpn3                     : ()                   ------|
+INFO net.py: 250: retnet_fg_num               : (1,)                 => fl_fpn3                     : ()                   ------|
+INFO net.py: 250: retnet_cls_pred_fpn4        : (2, 9, 26, 46)       => fl_fpn4                     : ()                   ------- (op: SigmoidFocalLoss)
+INFO net.py: 250: retnet_cls_labels_fpn4      : (2, 9, 26, 46)       => fl_fpn4                     : ()                   ------|
+INFO net.py: 250: retnet_fg_num               : (1,)                 => fl_fpn4                     : ()                   ------|
+INFO net.py: 250: retnet_cls_pred_fpn5        : (2, 9, 13, 23)       => fl_fpn5                     : ()                   ------- (op: SigmoidFocalLoss)
+INFO net.py: 250: retnet_cls_labels_fpn5      : (2, 9, 13, 23)       => fl_fpn5                     : ()                   ------|
+INFO net.py: 250: retnet_fg_num               : (1,)                 => fl_fpn5                     : ()                   ------|
+INFO net.py: 254: End of model: retinanet
+json_stats: {"eta": "23:20:34", "fl_fpn3": 1.760844, "fl_fpn4": 1.151705, "fl_fpn5": 0.337844, "iter": 0, "loss": 3.687471, "lr": 0.000333, "mb_qsize": 64, "mem": 1819, "retnet_bg_num": 5906106.000000, "retnet_fg_num": 50.000000, "retnet_loss_bbox_fpn3": 0.231629, "retnet_loss_bbox_fpn4": 0.155444, "retnet_loss_bbox_fpn5": 0.050005, "time": 2.801143}
+json_stats: {"eta": "2:18:41", "fl_fpn3": 1.930930, "fl_fpn4": 1.006105, "fl_fpn5": 0.142526, "iter": 20, "loss": 3.741665, "lr": 0.000360, "mb_qsize": 58, "mem": 1819, "retnet_bg_num": 5905917.500000, "retnet_fg_num": 111.500000, "retnet_loss_bbox_fpn3": 0.260916, "retnet_loss_bbox_fpn4": 0.127831, "retnet_loss_bbox_fpn5": 0.017010, "time": 0.277571}
+json_stats: {"eta": "1:14:26", "fl_fpn3": 1.938260, "fl_fpn4": 1.067715, "fl_fpn5": 0.360081, "iter": 40, "loss": 3.644320, "lr": 0.000387, "mb_qsize": 46, "mem": 1819, "retnet_bg_num": 5905989.500000, "retnet_fg_num": 98.500000, "retnet_loss_bbox_fpn3": 0.233118, "retnet_loss_bbox_fpn4": 0.145314, "retnet_loss_bbox_fpn5": 0.045421, "time": 0.149075}
+json_stats: {"eta": "1:15:18", "fl_fpn3": 1.310312, "fl_fpn4": 1.092102, "fl_fpn5": 0.208124, "iter": 60, "loss": 3.115464, "lr": 0.000413, "mb_qsize": 34, "mem": 1819, "retnet_bg_num": 5905884.000000, "retnet_fg_num": 123.500000, "retnet_loss_bbox_fpn3": 0.212357, "retnet_loss_bbox_fpn4": 0.138628, "retnet_loss_bbox_fpn5": 0.031428, "time": 0.150914}
+json_stats: {"eta": "1:15:52", "fl_fpn3": 1.589987, "fl_fpn4": 1.190653, "fl_fpn5": 0.197907, "iter": 80, "loss": 3.674655, "lr": 0.000440, "mb_qsize": 20, "mem": 1819, "retnet_bg_num": 5905886.500000, "retnet_fg_num": 121.500000, "retnet_loss_bbox_fpn3": 0.194760, "retnet_loss_bbox_fpn4": 0.150583, "retnet_loss_bbox_fpn5": 0.026619, "time": 0.152143}
+json_stats: {"eta": "1:16:14", "fl_fpn3": 1.892187, "fl_fpn4": 1.281052, "fl_fpn5": 0.249119, "iter": 100, "loss": 3.645245, "lr": 0.000467, "mb_qsize": 8, "mem": 1819, "retnet_bg_num": 5905928.500000, "retnet_fg_num": 122.000000, "retnet_loss_bbox_fpn3": 0.214711, "retnet_loss_bbox_fpn4": 0.148442, "retnet_loss_bbox_fpn5": 0.035874, "time": 0.152985}
+json_stats: {"eta": "1:19:48", "fl_fpn3": 1.624970, "fl_fpn4": 1.375553, "fl_fpn5": 0.172200, "iter": 120, "loss": 3.626760, "lr": 0.000493, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905888.500000, "retnet_fg_num": 116.000000, "retnet_loss_bbox_fpn3": 0.175030, "retnet_loss_bbox_fpn4": 0.160727, "retnet_loss_bbox_fpn5": 0.023901, "time": 0.160267}
+json_stats: {"eta": "1:37:25", "fl_fpn3": 1.874676, "fl_fpn4": 1.018938, "fl_fpn5": 0.238107, "iter": 140, "loss": 3.574078, "lr": 0.000520, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905885.500000, "retnet_fg_num": 121.500000, "retnet_loss_bbox_fpn3": 0.209119, "retnet_loss_bbox_fpn4": 0.119330, "retnet_loss_bbox_fpn5": 0.033026, "time": 0.195764}
+json_stats: {"eta": "1:51:14", "fl_fpn3": 1.522031, "fl_fpn4": 0.982148, "fl_fpn5": 0.244108, "iter": 160, "loss": 3.277366, "lr": 0.000547, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905932.000000, "retnet_fg_num": 111.500000, "retnet_loss_bbox_fpn3": 0.207750, "retnet_loss_bbox_fpn4": 0.128495, "retnet_loss_bbox_fpn5": 0.027377, "time": 0.223662}
+json_stats: {"eta": "2:02:14", "fl_fpn3": 1.174448, "fl_fpn4": 0.520127, "fl_fpn5": 0.223067, "iter": 180, "loss": 2.355058, "lr": 0.000573, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905899.000000, "retnet_fg_num": 119.000000, "retnet_loss_bbox_fpn3": 0.189018, "retnet_loss_bbox_fpn4": 0.141584, "retnet_loss_bbox_fpn5": 0.031692, "time": 0.245958}
+json_stats: {"eta": "2:08:21", "fl_fpn3": 0.648757, "fl_fpn4": 0.326846, "fl_fpn5": 0.090533, "iter": 200, "loss": 1.518981, "lr": 0.000600, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905933.500000, "retnet_fg_num": 120.500000, "retnet_loss_bbox_fpn3": 0.197684, "retnet_loss_bbox_fpn4": 0.132579, "retnet_loss_bbox_fpn5": 0.013222, "time": 0.258425}
+json_stats: {"eta": "2:13:59", "fl_fpn3": 0.498518, "fl_fpn4": 0.269226, "fl_fpn5": 0.143236, "iter": 220, "loss": 1.297331, "lr": 0.000627, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905915.500000, "retnet_fg_num": 112.000000, "retnet_loss_bbox_fpn3": 0.202302, "retnet_loss_bbox_fpn4": 0.117895, "retnet_loss_bbox_fpn5": 0.030205, "time": 0.269978}
+json_stats: {"eta": "2:19:37", "fl_fpn3": 0.484729, "fl_fpn4": 0.269965, "fl_fpn5": 0.095670, "iter": 240, "loss": 1.237645, "lr": 0.000653, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905888.500000, "retnet_fg_num": 124.000000, "retnet_loss_bbox_fpn3": 0.201419, "retnet_loss_bbox_fpn4": 0.114223, "retnet_loss_bbox_fpn5": 0.026782, "time": 0.281512}
+json_stats: {"eta": "2:23:33", "fl_fpn3": 0.463316, "fl_fpn4": 0.242894, "fl_fpn5": 0.061845, "iter": 260, "loss": 1.123118, "lr": 0.000680, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905922.000000, "retnet_fg_num": 108.500000, "retnet_loss_bbox_fpn3": 0.209979, "retnet_loss_bbox_fpn4": 0.101503, "retnet_loss_bbox_fpn5": 0.020560, "time": 0.289628}
+json_stats: {"eta": "2:26:48", "fl_fpn3": 0.418213, "fl_fpn4": 0.277366, "fl_fpn5": 0.066722, "iter": 280, "loss": 1.133948, "lr": 0.000707, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905984.000000, "retnet_fg_num": 93.000000, "retnet_loss_bbox_fpn3": 0.186261, "retnet_loss_bbox_fpn4": 0.132051, "retnet_loss_bbox_fpn5": 0.015620, "time": 0.296367}
+json_stats: {"eta": "2:29:52", "fl_fpn3": 0.392085, "fl_fpn4": 0.221615, "fl_fpn5": 0.069246, "iter": 300, "loss": 1.039593, "lr": 0.000733, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905926.500000, "retnet_fg_num": 114.000000, "retnet_loss_bbox_fpn3": 0.180850, "retnet_loss_bbox_fpn4": 0.122636, "retnet_loss_bbox_fpn5": 0.023561, "time": 0.302773}
+json_stats: {"eta": "2:30:43", "fl_fpn3": 0.338672, "fl_fpn4": 0.181136, "fl_fpn5": 0.052398, "iter": 320, "loss": 0.930925, "lr": 0.000760, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905976.000000, "retnet_fg_num": 98.000000, "retnet_loss_bbox_fpn3": 0.177412, "retnet_loss_bbox_fpn4": 0.122473, "retnet_loss_bbox_fpn5": 0.020445, "time": 0.304700}
+json_stats: {"eta": "2:33:33", "fl_fpn3": 0.323055, "fl_fpn4": 0.164221, "fl_fpn5": 0.048172, "iter": 340, "loss": 0.797975, "lr": 0.000787, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905952.500000, "retnet_fg_num": 104.000000, "retnet_loss_bbox_fpn3": 0.158465, "retnet_loss_bbox_fpn4": 0.111312, "retnet_loss_bbox_fpn5": 0.024287, "time": 0.310644}
+json_stats: {"eta": "2:35:10", "fl_fpn3": 0.261424, "fl_fpn4": 0.134778, "fl_fpn5": 0.043893, "iter": 360, "loss": 0.795596, "lr": 0.000813, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905945.500000, "retnet_fg_num": 112.500000, "retnet_loss_bbox_fpn3": 0.158496, "retnet_loss_bbox_fpn4": 0.092538, "retnet_loss_bbox_fpn5": 0.020760, "time": 0.314106}
+json_stats: {"eta": "2:36:57", "fl_fpn3": 0.255440, "fl_fpn4": 0.151838, "fl_fpn5": 0.034226, "iter": 380, "loss": 0.767843, "lr": 0.000840, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905911.000000, "retnet_fg_num": 125.500000, "retnet_loss_bbox_fpn3": 0.142839, "retnet_loss_bbox_fpn4": 0.109591, "retnet_loss_bbox_fpn5": 0.014565, "time": 0.317937}
+json_stats: {"eta": "2:38:31", "fl_fpn3": 0.218076, "fl_fpn4": 0.136880, "fl_fpn5": 0.036593, "iter": 400, "loss": 0.685838, "lr": 0.000867, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905904.500000, "retnet_fg_num": 128.500000, "retnet_loss_bbox_fpn3": 0.129696, "retnet_loss_bbox_fpn4": 0.093089, "retnet_loss_bbox_fpn5": 0.020475, "time": 0.321333}
+json_stats: {"eta": "2:39:58", "fl_fpn3": 0.231057, "fl_fpn4": 0.116770, "fl_fpn5": 0.046667, "iter": 420, "loss": 0.621507, "lr": 0.000893, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905891.000000, "retnet_fg_num": 117.000000, "retnet_loss_bbox_fpn3": 0.130028, "retnet_loss_bbox_fpn4": 0.101205, "retnet_loss_bbox_fpn5": 0.026487, "time": 0.324489}
+json_stats: {"eta": "2:40:41", "fl_fpn3": 0.191673, "fl_fpn4": 0.135929, "fl_fpn5": 0.034453, "iter": 440, "loss": 0.606451, "lr": 0.000920, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905981.500000, "retnet_fg_num": 94.500000, "retnet_loss_bbox_fpn3": 0.104306, "retnet_loss_bbox_fpn4": 0.078925, "retnet_loss_bbox_fpn5": 0.017588, "time": 0.326153}
+json_stats: {"eta": "2:41:24", "fl_fpn3": 0.211030, "fl_fpn4": 0.100425, "fl_fpn5": 0.021159, "iter": 460, "loss": 0.606542, "lr": 0.000947, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905939.500000, "retnet_fg_num": 102.500000, "retnet_loss_bbox_fpn3": 0.123178, "retnet_loss_bbox_fpn4": 0.077724, "retnet_loss_bbox_fpn5": 0.019991, "time": 0.327841}
+json_stats: {"eta": "2:42:51", "fl_fpn3": 0.189553, "fl_fpn4": 0.128670, "fl_fpn5": 0.042803, "iter": 480, "loss": 0.626722, "lr": 0.000973, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905870.500000, "retnet_fg_num": 134.000000, "retnet_loss_bbox_fpn3": 0.097144, "retnet_loss_bbox_fpn4": 0.083881, "retnet_loss_bbox_fpn5": 0.025458, "time": 0.331019}
+json_stats: {"eta": "2:43:35", "fl_fpn3": 0.163829, "fl_fpn4": 0.118421, "fl_fpn5": 0.034316, "iter": 500, "loss": 0.566377, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905947.500000, "retnet_fg_num": 101.500000, "retnet_loss_bbox_fpn3": 0.090663, "retnet_loss_bbox_fpn4": 0.089442, "retnet_loss_bbox_fpn5": 0.022757, "time": 0.332719}
+json_stats: {"eta": "2:44:09", "fl_fpn3": 0.175452, "fl_fpn4": 0.143406, "fl_fpn5": 0.045252, "iter": 520, "loss": 0.592356, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905928.000000, "retnet_fg_num": 119.000000, "retnet_loss_bbox_fpn3": 0.096745, "retnet_loss_bbox_fpn4": 0.100599, "retnet_loss_bbox_fpn5": 0.043246, "time": 0.334109}
+json_stats: {"eta": "2:44:24", "fl_fpn3": 0.175920, "fl_fpn4": 0.084939, "fl_fpn5": 0.018860, "iter": 540, "loss": 0.502087, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905940.500000, "retnet_fg_num": 111.000000, "retnet_loss_bbox_fpn3": 0.098052, "retnet_loss_bbox_fpn4": 0.061461, "retnet_loss_bbox_fpn5": 0.012997, "time": 0.334842}
+json_stats: {"eta": "2:44:35", "fl_fpn3": 0.249715, "fl_fpn4": 0.092263, "fl_fpn5": 0.024694, "iter": 560, "loss": 0.602047, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5906036.500000, "retnet_fg_num": 77.500000, "retnet_loss_bbox_fpn3": 0.140671, "retnet_loss_bbox_fpn4": 0.063766, "retnet_loss_bbox_fpn5": 0.016584, "time": 0.335447}
+json_stats: {"eta": "2:45:28", "fl_fpn3": 0.144703, "fl_fpn4": 0.091487, "fl_fpn5": 0.025882, "iter": 580, "loss": 0.479371, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905905.500000, "retnet_fg_num": 120.000000, "retnet_loss_bbox_fpn3": 0.091496, "retnet_loss_bbox_fpn4": 0.072709, "retnet_loss_bbox_fpn5": 0.012913, "time": 0.337465}
+json_stats: {"eta": "2:45:47", "fl_fpn3": 0.117682, "fl_fpn4": 0.083576, "fl_fpn5": 0.024807, "iter": 600, "loss": 0.448553, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905944.000000, "retnet_fg_num": 105.500000, "retnet_loss_bbox_fpn3": 0.091432, "retnet_loss_bbox_fpn4": 0.062093, "retnet_loss_bbox_fpn5": 0.015134, "time": 0.338350}
+json_stats: {"eta": "2:46:11", "fl_fpn3": 0.114891, "fl_fpn4": 0.094027, "fl_fpn5": 0.032105, "iter": 620, "loss": 0.433729, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905936.000000, "retnet_fg_num": 117.500000, "retnet_loss_bbox_fpn3": 0.076771, "retnet_loss_bbox_fpn4": 0.081038, "retnet_loss_bbox_fpn5": 0.028598, "time": 0.339383}
+json_stats: {"eta": "2:46:51", "fl_fpn3": 0.109619, "fl_fpn4": 0.077324, "fl_fpn5": 0.023553, "iter": 640, "loss": 0.397296, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905907.500000, "retnet_fg_num": 121.000000, "retnet_loss_bbox_fpn3": 0.068910, "retnet_loss_bbox_fpn4": 0.065518, "retnet_loss_bbox_fpn5": 0.018873, "time": 0.341006}
+json_stats: {"eta": "2:47:31", "fl_fpn3": 0.117669, "fl_fpn4": 0.057200, "fl_fpn5": 0.011185, "iter": 660, "loss": 0.340644, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905853.500000, "retnet_fg_num": 135.000000, "retnet_loss_bbox_fpn3": 0.080226, "retnet_loss_bbox_fpn4": 0.047114, "retnet_loss_bbox_fpn5": 0.016248, "time": 0.342603}
+json_stats: {"eta": "2:47:43", "fl_fpn3": 0.090592, "fl_fpn4": 0.063971, "fl_fpn5": 0.023155, "iter": 680, "loss": 0.363519, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905908.000000, "retnet_fg_num": 113.000000, "retnet_loss_bbox_fpn3": 0.078324, "retnet_loss_bbox_fpn4": 0.054506, "retnet_loss_bbox_fpn5": 0.017395, "time": 0.343213}
+json_stats: {"eta": "2:48:18", "fl_fpn3": 0.097225, "fl_fpn4": 0.062302, "fl_fpn5": 0.019788, "iter": 700, "loss": 0.351186, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905938.500000, "retnet_fg_num": 108.500000, "retnet_loss_bbox_fpn3": 0.075003, "retnet_loss_bbox_fpn4": 0.060362, "retnet_loss_bbox_fpn5": 0.014821, "time": 0.344655}
+json_stats: {"eta": "2:48:25", "fl_fpn3": 0.114790, "fl_fpn4": 0.049533, "fl_fpn5": 0.019921, "iter": 720, "loss": 0.389283, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905936.500000, "retnet_fg_num": 111.000000, "retnet_loss_bbox_fpn3": 0.075283, "retnet_loss_bbox_fpn4": 0.046559, "retnet_loss_bbox_fpn5": 0.019376, "time": 0.345141}
+json_stats: {"eta": "2:48:22", "fl_fpn3": 0.100897, "fl_fpn4": 0.046534, "fl_fpn5": 0.010644, "iter": 740, "loss": 0.300080, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905941.500000, "retnet_fg_num": 105.000000, "retnet_loss_bbox_fpn3": 0.080461, "retnet_loss_bbox_fpn4": 0.042701, "retnet_loss_bbox_fpn5": 0.012819, "time": 0.345260}
+json_stats: {"eta": "2:48:29", "fl_fpn3": 0.077701, "fl_fpn4": 0.060118, "fl_fpn5": 0.022308, "iter": 760, "loss": 0.305651, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905935.500000, "retnet_fg_num": 108.000000, "retnet_loss_bbox_fpn3": 0.059638, "retnet_loss_bbox_fpn4": 0.049303, "retnet_loss_bbox_fpn5": 0.017270, "time": 0.345725}
+json_stats: {"eta": "2:49:08", "fl_fpn3": 0.119682, "fl_fpn4": 0.063376, "fl_fpn5": 0.022606, "iter": 780, "loss": 0.373678, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905942.500000, "retnet_fg_num": 115.000000, "retnet_loss_bbox_fpn3": 0.082604, "retnet_loss_bbox_fpn4": 0.065478, "retnet_loss_bbox_fpn5": 0.015614, "time": 0.347310}
+json_stats: {"eta": "2:50:55", "fl_fpn3": 0.089463, "fl_fpn4": 0.068054, "fl_fpn5": 0.024224, "iter": 800, "loss": 0.308002, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905914.500000, "retnet_fg_num": 121.000000, "retnet_loss_bbox_fpn3": 0.053690, "retnet_loss_bbox_fpn4": 0.059598, "retnet_loss_bbox_fpn5": 0.022200, "time": 0.351213}
+json_stats: {"eta": "2:52:52", "fl_fpn3": 0.091216, "fl_fpn4": 0.052515, "fl_fpn5": 0.015585, "iter": 820, "loss": 0.315361, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905917.000000, "retnet_fg_num": 112.500000, "retnet_loss_bbox_fpn3": 0.075200, "retnet_loss_bbox_fpn4": 0.038952, "retnet_loss_bbox_fpn5": 0.015251, "time": 0.355458}
+json_stats: {"eta": "2:54:36", "fl_fpn3": 0.078204, "fl_fpn4": 0.055782, "fl_fpn5": 0.023137, "iter": 840, "loss": 0.308593, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905915.000000, "retnet_fg_num": 110.000000, "retnet_loss_bbox_fpn3": 0.049908, "retnet_loss_bbox_fpn4": 0.058785, "retnet_loss_bbox_fpn5": 0.023393, "time": 0.359282}
+json_stats: {"eta": "2:56:56", "fl_fpn3": 0.075955, "fl_fpn4": 0.057884, "fl_fpn5": 0.019247, "iter": 860, "loss": 0.310115, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905869.500000, "retnet_fg_num": 130.500000, "retnet_loss_bbox_fpn3": 0.061200, "retnet_loss_bbox_fpn4": 0.050349, "retnet_loss_bbox_fpn5": 0.015553, "time": 0.364319}
+json_stats: {"eta": "2:58:39", "fl_fpn3": 0.089890, "fl_fpn4": 0.069950, "fl_fpn5": 0.026761, "iter": 880, "loss": 0.345047, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905977.500000, "retnet_fg_num": 101.500000, "retnet_loss_bbox_fpn3": 0.060834, "retnet_loss_bbox_fpn4": 0.055683, "retnet_loss_bbox_fpn5": 0.023228, "time": 0.368102}
+json_stats: {"eta": "3:00:20", "fl_fpn3": 0.119951, "fl_fpn4": 0.060124, "fl_fpn5": 0.031392, "iter": 900, "loss": 0.350617, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905978.000000, "retnet_fg_num": 106.000000, "retnet_loss_bbox_fpn3": 0.075257, "retnet_loss_bbox_fpn4": 0.044238, "retnet_loss_bbox_fpn5": 0.020883, "time": 0.371831}
+json_stats: {"eta": "3:02:01", "fl_fpn3": 0.063235, "fl_fpn4": 0.051316, "fl_fpn5": 0.011210, "iter": 920, "loss": 0.248573, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905879.000000, "retnet_fg_num": 129.000000, "retnet_loss_bbox_fpn3": 0.055136, "retnet_loss_bbox_fpn4": 0.051717, "retnet_loss_bbox_fpn5": 0.011345, "time": 0.375555}
+json_stats: {"eta": "3:03:52", "fl_fpn3": 0.072065, "fl_fpn4": 0.049547, "fl_fpn5": 0.007720, "iter": 940, "loss": 0.261963, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905953.500000, "retnet_fg_num": 102.500000, "retnet_loss_bbox_fpn3": 0.055140, "retnet_loss_bbox_fpn4": 0.045604, "retnet_loss_bbox_fpn5": 0.010622, "time": 0.379638}
+json_stats: {"eta": "3:05:38", "fl_fpn3": 0.097974, "fl_fpn4": 0.045041, "fl_fpn5": 0.012511, "iter": 960, "loss": 0.294495, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905882.500000, "retnet_fg_num": 135.500000, "retnet_loss_bbox_fpn3": 0.064859, "retnet_loss_bbox_fpn4": 0.044003, "retnet_loss_bbox_fpn5": 0.009749, "time": 0.383564}
+json_stats: {"eta": "3:07:28", "fl_fpn3": 0.093603, "fl_fpn4": 0.042369, "fl_fpn5": 0.008912, "iter": 980, "loss": 0.280918, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905867.500000, "retnet_fg_num": 131.000000, "retnet_loss_bbox_fpn3": 0.074049, "retnet_loss_bbox_fpn4": 0.037309, "retnet_loss_bbox_fpn5": 0.008963, "time": 0.387599}
+INFO net.py: 143: Saving parameters and momentum to /home/vhvkhoa/aic_track3/Detectron/car_det/R50_2_0_0_75/train/car_detection_train/retinanet/model_iter999.pkl
+json_stats: {"eta": "3:08:36", "fl_fpn3": 0.079988, "fl_fpn4": 0.047487, "fl_fpn5": 0.016930, "iter": 1000, "loss": 0.256477, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905997.000000, "retnet_fg_num": 91.000000, "retnet_loss_bbox_fpn3": 0.058012, "retnet_loss_bbox_fpn4": 0.042085, "retnet_loss_bbox_fpn5": 0.016757, "time": 0.390223}
+json_stats: {"eta": "3:09:41", "fl_fpn3": 0.076841, "fl_fpn4": 0.045469, "fl_fpn5": 0.014008, "iter": 1020, "loss": 0.264720, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905861.500000, "retnet_fg_num": 120.500000, "retnet_loss_bbox_fpn3": 0.068565, "retnet_loss_bbox_fpn4": 0.023111, "retnet_loss_bbox_fpn5": 0.011013, "time": 0.392721}
+json_stats: {"eta": "3:11:14", "fl_fpn3": 0.093318, "fl_fpn4": 0.031310, "fl_fpn5": 0.004446, "iter": 1040, "loss": 0.249279, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905957.500000, "retnet_fg_num": 112.500000, "retnet_loss_bbox_fpn3": 0.077054, "retnet_loss_bbox_fpn4": 0.035357, "retnet_loss_bbox_fpn5": 0.003964, "time": 0.396231}
+json_stats: {"eta": "3:12:21", "fl_fpn3": 0.100194, "fl_fpn4": 0.037128, "fl_fpn5": 0.013483, "iter": 1060, "loss": 0.260797, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905932.500000, "retnet_fg_num": 112.000000, "retnet_loss_bbox_fpn3": 0.056637, "retnet_loss_bbox_fpn4": 0.033938, "retnet_loss_bbox_fpn5": 0.010876, "time": 0.398813}
+json_stats: {"eta": "3:14:01", "fl_fpn3": 0.081561, "fl_fpn4": 0.041007, "fl_fpn5": 0.010759, "iter": 1080, "loss": 0.263945, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905859.000000, "retnet_fg_num": 140.500000, "retnet_loss_bbox_fpn3": 0.060789, "retnet_loss_bbox_fpn4": 0.043533, "retnet_loss_bbox_fpn5": 0.007037, "time": 0.402546}
+json_stats: {"eta": "3:15:18", "fl_fpn3": 0.080518, "fl_fpn4": 0.040748, "fl_fpn5": 0.012980, "iter": 1100, "loss": 0.250763, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905906.000000, "retnet_fg_num": 114.000000, "retnet_loss_bbox_fpn3": 0.056840, "retnet_loss_bbox_fpn4": 0.035778, "retnet_loss_bbox_fpn5": 0.010728, "time": 0.405473}
+json_stats: {"eta": "3:16:45", "fl_fpn3": 0.090205, "fl_fpn4": 0.042989, "fl_fpn5": 0.015110, "iter": 1120, "loss": 0.262618, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905931.500000, "retnet_fg_num": 113.500000, "retnet_loss_bbox_fpn3": 0.054151, "retnet_loss_bbox_fpn4": 0.033509, "retnet_loss_bbox_fpn5": 0.009280, "time": 0.408777}
+json_stats: {"eta": "3:17:32", "fl_fpn3": 0.112552, "fl_fpn4": 0.049667, "fl_fpn5": 0.015233, "iter": 1140, "loss": 0.305478, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905977.000000, "retnet_fg_num": 106.500000, "retnet_loss_bbox_fpn3": 0.069755, "retnet_loss_bbox_fpn4": 0.045653, "retnet_loss_bbox_fpn5": 0.010984, "time": 0.410691}
+json_stats: {"eta": "3:18:41", "fl_fpn3": 0.053500, "fl_fpn4": 0.034619, "fl_fpn5": 0.010213, "iter": 1160, "loss": 0.277363, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905985.000000, "retnet_fg_num": 96.000000, "retnet_loss_bbox_fpn3": 0.054455, "retnet_loss_bbox_fpn4": 0.043411, "retnet_loss_bbox_fpn5": 0.009962, "time": 0.413372}
+json_stats: {"eta": "3:19:36", "fl_fpn3": 0.089311, "fl_fpn4": 0.040229, "fl_fpn5": 0.008246, "iter": 1180, "loss": 0.253471, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905930.500000, "retnet_fg_num": 111.500000, "retnet_loss_bbox_fpn3": 0.068848, "retnet_loss_bbox_fpn4": 0.039103, "retnet_loss_bbox_fpn5": 0.010096, "time": 0.415579}
+json_stats: {"eta": "3:20:16", "fl_fpn3": 0.094365, "fl_fpn4": 0.027337, "fl_fpn5": 0.008022, "iter": 1200, "loss": 0.248783, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5906020.000000, "retnet_fg_num": 79.000000, "retnet_loss_bbox_fpn3": 0.072908, "retnet_loss_bbox_fpn4": 0.024395, "retnet_loss_bbox_fpn5": 0.006140, "time": 0.417230}
+json_stats: {"eta": "3:21:16", "fl_fpn3": 0.073287, "fl_fpn4": 0.049117, "fl_fpn5": 0.013546, "iter": 1220, "loss": 0.266799, "lr": 0.001000, "mb_qsize": 0, "mem": 1819, "retnet_bg_num": 5905924

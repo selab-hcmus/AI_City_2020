@@ -1,0 +1,79 @@
+DATASET ai_city
+TRAIN_FOLDER ../Data/ai_city/training/frames/day/
+TEST_FOLDER ../Data/ai_city/testing/frames/
+GPU 1
+BATCH_SIZE 4
+NUM_HIS 6
+ITERATIONS 90000
+PER_STEP 1000
+EVALUATE compute_auc
+HEIGHT 256
+WIDTH 256
+FLOWNET_CHECKPOINT checkpoints/pretrains/flownet-SD.ckpt-0
+FLOW_HEIGHT 384
+FLOW_WIDTH 512
+L_NUM 2
+ALPHA_NUM 1
+LAM_ADV 0.05
+LAM_LP 1.0
+LAM_GDL 1.0
+LAM_FLOW 2.0
+LRATE_G [5e-05, 5e-06]
+LRATE_G_BOUNDARIES [50000]
+LRATE_D [5e-05, 5e-06]
+LRATE_D_BOUNDARIES [50000]
+SAVE_DIR ai_city_l_2_alpha_1_lp_1.0_adv_0.05_gdl_1.0_flow_2.0
+SNAPSHOT_DIR checkpoints/ai_city_l_2_alpha_1_lp_1.0_adv_0.05_gdl_1.0_flow_2.0_ai_city_day_90000_6
+SUMMARY_DIR summary/ai_city_l_2_alpha_1_lp_1.0_adv_0.05_gdl_1.0_flow_2.0_ai_city_day_90000_6
+PSNR_DIR psnrs/ai_city_l_2_alpha_1_lp_1.0_adv_0.05_gdl_1.0_flow_2.0
+<================ Constants information ================>
+	DATASET	ai_city
+	TRAIN_FOLDER	../Data/ai_city/training/frames/day/
+	TEST_FOLDER	../Data/ai_city/testing/frames/
+	GPU	1
+	BATCH_SIZE	4
+	NUM_HIS	6
+	ITERATIONS	90000
+	PER_STEP	1000
+	EVALUATE	compute_auc
+	HEIGHT	256
+	WIDTH	256
+	FLOWNET_CHECKPOINT	checkpoints/pretrains/flownet-SD.ckpt-0
+	FLOW_HEIGHT	384
+	FLOW_WIDTH	512
+	L_NUM	2
+	ALPHA_NUM	1
+	LAM_ADV	0.05
+	LAM_LP	1.0
+	LAM_GDL	1.0
+	LAM_FLOW	2.0
+	LRATE_G	[5e-05, 5e-06]
+	LRATE_G_BOUNDARIES	[50000]
+	LRATE_D	[5e-05, 5e-06]
+	LRATE_D_BOUNDARIES	[50000]
+	SAVE_DIR	ai_city_l_2_alpha_1_lp_1.0_adv_0.05_gdl_1.0_flow_2.0
+	SNAPSHOT_DIR	checkpoints/ai_city_l_2_alpha_1_lp_1.0_adv_0.05_gdl_1.0_flow_2.0_ai_city_day_90000_6
+	SUMMARY_DIR	summary/ai_city_l_2_alpha_1_lp_1.0_adv_0.05_gdl_1.0_flow_2.0_ai_city_day_90000_6
+	PSNR_DIR	psnrs/ai_city_l_2_alpha_1_lp_1.0_adv_0.05_gdl_1.0_flow_2.0
+
+48
+generator dataset, <DatasetV1Adapter shapes: (256, 256, 21), types: tf.float32>
+epoch dataset, <DatasetV1Adapter shapes: (?, 256, 256, 21), types: tf.float32>
+train inputs = Tensor("dataset/strided_slice:0", shape=(4, 256, 256, 18), dtype=float32)
+train prediction gt = Tensor("dataset/strided_slice_1:0", shape=(4, 256, 256, 3), dtype=float32)
+20
+generator dataset, <DatasetV1Adapter shapes: (256, 256, 21), types: tf.float32>
+epoch dataset, <DatasetV1Adapter shapes: (?, 256, 256, 21), types: tf.float32>
+test inputs = Tensor("dataset/strided_slice_2:0", shape=(4, 256, 256, 18), dtype=float32)
+test prediction gt = Tensor("dataset/strided_slice_3:0", shape=(4, 256, 256, 3), dtype=float32)
+training = generator
+testing = generator
+real_outputs = Tensor("discriminator/Sigmoid:0", shape=(4, 35, 35, 1), dtype=float32)
+fake_outputs = Tensor("discriminator_1/Sigmoid:0", shape=(4, 35, 35, 1), dtype=float32)
+Init successfully!
+FlownetSD restore from checkpoints/pretrains/flownet-SD.ckpt-0!
+No checkpoint file found.
+Training discriminator...
+Training generator...
+{'path': '../Data/ai_city/testing/frames/93.mp4', 'frame': ['../Data/ai_city/testing/frames/93.mp4/0038.jpg'], 'length': 1}
+7
