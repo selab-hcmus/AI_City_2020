@@ -19,11 +19,9 @@ Our implementation comprised of:
 I ran this code with **NVIDIA Tesla K80**. If you face a problem about GPU version, you can config GPU_version in CenterNet resources.
 
 #### Download Dataset
-1. Download images-set:
-https://drive.google.com/open?id=1xFcfOEfAXjjzdrZbH3glOxv0rHIne8H7
+1. Download images-set: [link](https://drive.google.com/open?id=1xFcfOEfAXjjzdrZbH3glOxv0rHIne8H7)
 
-2. Download labels:
-https://drive.google.com/file/d/1SWsjrSNaRp3CVe9h3Fu41ezkvXcGPy0_
+2. Download labels: [link](https://drive.google.com/file/d/1SWsjrSNaRp3CVe9h3Fu41ezkvXcGPy0_)
 
 3. Create folders: 'abc', 'abc/images' and 'abc/labels' into 'data' folder.
 
