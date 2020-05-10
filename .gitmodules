@@ -1,0 +1,3 @@
+[submodule "track1-multi-intersection-counting/CenterNet"]
+	path = track1-multi-intersection-counting/CenterNet
+	url = https://github.com/xuan-vy-nguyen/CenterNet.git
