@@ -62,6 +62,6 @@ Values are tab separated, with each line containing video id, upper left and low
 
 Output are pairs of video id and frame of starting of accident.
 
-** Anomaly Prediction using GAN **
+**Anomaly Prediction using GAN**
 
 You can find the source code in for this in sub-folder (Codes/).
