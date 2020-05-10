@@ -43,6 +43,7 @@ python setup.py install --user
 ```
 cd AIC20/track1-multi-intersection-counting
 CenterNet_ROOT = 'CenterNet'
+git clone 
 cd $CenterNet_ROOT
 pip install -r requirements.txt
 cd $CenterNet_ROOT/src/lib/external
