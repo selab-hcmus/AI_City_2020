@@ -1,5 +1,5 @@
 # iTASK - Intelligent Traffic Analysis Software Kit
-CVPR AI City Challenge 2020
+CVPR AI City Challenge 2020 (HCMUS Team)
 
 ## Introduction
 
