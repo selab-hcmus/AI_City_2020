@@ -1,7 +1,7 @@
 **Abnormality Detection with Multi-Adaptive Vehicle Detectors
 for Traffic Video Analysis**
 
-This is the source code for Track 3 AI City Challenge 2019, with updates for Track 4 of AI City Challenge 2020.
+This is the source code for Track 3 AI City Challenge 2019, with updates for Track 4 of AI City Challenge 2020. We added a few parts for refinement from our previous-year algorithm.
 
 Extract Road Mask: `Tools/mask_creating.py`
 
@@ -61,3 +61,7 @@ To track, run `trace_back.py`. Videos to track are in `trace_input.txt`.
 Values are tab separated, with each line containing video id, upper left and lower right corners of bounding box, time to start tracking (in seconds), and offset of frames (in seconds, 0 if frames are extracted from the beginning of the video).
 
 Output are pairs of video id and frame of starting of accident.
+
+**Anomaly Prediction using GAN**
+
+You can find the source code in for this in sub-folder (Codes/).
