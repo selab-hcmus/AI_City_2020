@@ -7,15 +7,21 @@ Our Intelligent Traffic Analysis Software Kit (iTASK) aims to tackle three chall
 
 ## Vehicle Flow Counting
 
-We propose to real-time track vehicles moving along the desired direction in corresponding motion-of-interests (MOIs). We achieved S1 score of 0.8297 for vehicle flow counting in Track 1.
+We propose to real-time track vehicles moving along the desired direction in corresponding motion-of-interests (MOIs). Our proposed method achieved S1 score of 0.8297 for vehicle flow counting in Track 1.
+
+![](track1.png)
 
 ## Vehicle Re-identification
 
-We consider each vehicle as a document with multiple semantic words (i.e., vehicle attributes) and transform the given problem to classical document retrieval. We achieved mAP score of 0.3882 for vehicle re-identification in Track 2.
+We consider each vehicle as a document with multiple semantic words (i.e., vehicle attributes) and transform the given problem to classical document retrieval. Our proposed method achieved mAP score of 0.3882 for vehicle re-identification in Track 2.
+
+![](track2.png)
 
 ## Abnormal Event Detection
 
-We propose to forward and backward refine anomaly detection using GAN-based future prediction and backward tracking completely stalled vehicle or sudden-change direction, respectively. We achieved S4 score of 0.9059 for anomaly detection in Track 4.
+We propose to forward and backward refine anomaly detection using GAN-based future prediction and backward tracking completely stalled vehicle or sudden-change direction, respectively. Our proposed method achieved S4 score of 0.9059 for anomaly detection in Track 4.
+
+![](track4.png)
 
 ## Citations
 Please consider citing this project in your publications if it helps your research:
