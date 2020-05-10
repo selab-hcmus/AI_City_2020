@@ -54,7 +54,7 @@ FRCNN's Jia Yi Wei: [2018AICITY_MCPRL](https://github.com/NVIDIAAICITYCHALLENGE/
 
 **Backward vehicle tracking**
 
-First, extract frames from the videos using extract_frames.py and put them in folders: frames/<video_id>.
+First, extract frames from the videos using `extract_frames.py` and put them in folders: frames/<video_id>.
 
 To track, run `trace_back.py`. Videos to track are in `trace_input.txt`. 
 
