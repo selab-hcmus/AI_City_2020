@@ -77,17 +77,39 @@ python demo_video.py ctdet --arch dla_34 --load_model <link to model> --demo <li
 
 
 ### Reproduce tracking
+Change following paths inside test_iou.py for running iou tracking. 
 
++ path_video: path to your video dataset.
+
++ path_bbox_dla: path to bbox extracted in previous detecting phase.
+
++ PATH_RESULT(inside tracker/iou_tracker.py): tracking results will be saved in this path folder 
+
+You can also visualize the results of tracking by changing the following path and set $visualize$ variable to True inside tracker/iou_tracker.py script
+
++ PATH_SVID: path to visualizing tracking results
+
+Then run
 ```
-cd AIC20
-
 python test_iou.py
 ```
 
 ### Reproduce counting
+Some important path you have to change for successfully running our counter:
+
++ PATH_ROI: path to region of interest of challenge
+
++ PATH_SCREENSHOT: path to screenshot and movement of challenge
+
++ PATH_VIDEO: path to video data
+
++ PATH_TRACKING: path to previous tracking phase results
+
++ PATH_VIDEO_OUT: path to visualized results
+
+You can also visualize results video by specifying VISUALIZED variable to True in counter.py scripts. Then run
 
 ```
-cd AIC20/car_counter
 
 python counter.py
 ```
