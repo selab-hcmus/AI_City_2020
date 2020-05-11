@@ -38,7 +38,7 @@ if __name__ == "__main__":
             data = format_bbox(vid_name, file_name)
             content_video_path = os.path.join(path_video, vid_name+".mp4")
             # results = track_viou_edited(content_video_path, data, 0.3, 0.7, 0.6, 13, 6, "KCF", 1.0)
-            results = track_iou_edited(vid_name, data, 0.3, 0.7, 0.15, 10)
+            results = track_iou_edited(vid_name, data, 0.3, 0.7, 0.15, 10, path_video)
     # run_tracking_bbox_dla()
     duration = time.time() - duration 
     print("Total tracking time:", duration)
