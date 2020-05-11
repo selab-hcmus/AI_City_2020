@@ -11,9 +11,9 @@ import cv2
 import numpy as np
 from tracker.util import load_mot, iou
 PATH_RESULT = './dla_backbone/info_tracking'
-PATH_VID = './data/AIC20_track1/Dataset_A'
+#PATH_VID = './data/AIC20_track1/Dataset_A'
 PATH_SVID = './dla_backbone/info_tracking_results'
-def track_iou_edited(vid_name, detections, sigma_l, sigma_h, sigma_iou, t_min):
+def track_iou_edited(vid_name, detections, sigma_l, sigma_h, sigma_iou, t_min, path_video):
     """
     Simple IOU based tracker.
     See "High-Speed Tracking-by-Detection Without Using Image Information by E. Bochinski, V. Eiselein, T. Sikora" for
@@ -30,7 +30,7 @@ def track_iou_edited(vid_name, detections, sigma_l, sigma_h, sigma_iou, t_min):
         list: list of tracks.
     """
     visualize = False
-    video_path = os.path.join(PATH_VID, vid_name+".mp4")
+    video_path = os.path.join(path_video, vid_name+".mp4")
     idx = 0
     print(video_path)
     input = cv2.VideoCapture(video_path)
