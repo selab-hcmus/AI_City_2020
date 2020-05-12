@@ -13,10 +13,10 @@ Our implementation comprised of:
 
 ## Usage 
 
-### Install Detector - CenterNet
+### Install Detector
 
 #### Default GPU
-I ran this code with **NVIDIA Tesla K80**. If you face a problem about GPU version, you can config GPU_version in CenterNet resources.
+I ran this code with **NVIDIA Tesla K80**.
 
 #### Download Dataset
 1. Download images-set: [link](https://drive.google.com/open?id=1xFcfOEfAXjjzdrZbH3glOxv0rHIne8H7)
@@ -39,7 +39,7 @@ make
 python setup.py install --user
 ```
 
-#### Install CenterNet
+#### Install Detector
 ```
 cd AIC20/track1-multi-intersection-counting
 CenterNet_ROOT = 'CenterNet'
@@ -116,7 +116,6 @@ python counter.py
 
 ### Acknowledgement
 
+Source code for Detector is built based on [CenterNet](https://github.com/xingyizhou/CenterNet.git)
+
 Source code for tracking car is built based on iou tracking of [High-Speed Tracking-by-Detection Without Using Image Information](https://github.com/bochinski/iou-tracker)
-
-
-
