@@ -23,11 +23,13 @@ I ran this code with **NVIDIA Tesla K80**.
 
 2. Download labels: [link](https://drive.google.com/file/d/1SWsjrSNaRp3CVe9h3Fu41ezkvXcGPy0_)
 
+3. Go to 'CenterNet' and create folder 'data'.
+
 3. Create folders: 'abc', 'abc/images' and 'abc/labels' into 'data' folder.
 
-4. Unzip images-set, then move all images from images-set folder to 'data/abc/images'.
+4. Unzip images-set, then move all images from images-set folder to 'CenterNet/data/abc/images'.
 
-5. Unzip labels, then move all json files to 'data/abc/labels'.
+5. Unzip labels, then move all json files to 'CenterNet/data/abc/labels'.
 
 #### Install COCOAPI
 ```
@@ -43,7 +45,6 @@ python setup.py install --user
 ```
 cd AIC20/track1-multi-intersection-counting
 CenterNet_ROOT = 'CenterNet'
-git clone 
 cd $CenterNet_ROOT
 pip install -r requirements.txt
 cd $CenterNet_ROOT/src/lib/external
