@@ -125,3 +125,7 @@ Visualized video of our system can be found [here](https://drive.google.com/open
 Source code for Detector is built based on [CenterNet](https://github.com/xingyizhou/CenterNet.git)
 
 Source code for tracking car is built based on iou tracking of [High-Speed Tracking-by-Detection Without Using Image Information](https://github.com/bochinski/iou-tracker)
+
+### Contact Information
+
+If you have any questions, you can contact me via ntrtung17@apcs.vn or my teammate xuanvy99@gmail.com 
