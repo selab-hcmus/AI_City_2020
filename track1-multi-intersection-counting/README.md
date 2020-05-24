@@ -130,6 +130,6 @@ Source code for tracking car is built based on iou tracking of [High-Speed Track
 
 If you have any questions, please contact:
 
-+ Nguyen Trong Tung(ntrtung17@gmail.com)
++ Nguyen Trong Tung(ntrtung17@apcs.vn)
 
 + Nguyen Xuan Vy(xuanvy99@gmail.com)
