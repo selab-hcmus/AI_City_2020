@@ -82,7 +82,7 @@ Change following paths inside test_iou.py for running iou tracking.
 
 + path_video: path to your video dataset.
 
-+ path_bbox_dla: path to bbox extracted in previous detecting phase.
++ path_bbox_dla: path to bbox extracted in previous detecting phase or you can access it directly [here](https://drive.google.com/open?id=10tL5q7SPslmDyB5eCwWpqkicP0brEmai)
 
 + PATH_RESULT(inside tracker/iou_tracker.py): tracking results will be saved in this path folder 
 
@@ -96,13 +96,16 @@ python test_iou.py
 ```
 
 ### Reproduce counting
+
 Some important path you have to change for successfully running our counter:
 
 + PATH_ROI: path to region of interest of challenge
 
 + PATH_SCREENSHOT: path to screenshot and movement of challenge
 
-+ PATH_VIDEO: path to video data
++ PATH_MOI: path to MOI regions. You can access [here]()
+
++ PATH_VIDEO: path to video data of challenge 
 
 + PATH_TRACKING: path to previous tracking phase results
 
@@ -114,6 +117,8 @@ You can also visualize results video by specifying VISUALIZED variable to True i
 
 python counter.py
 ```
+
+Visualized video of our system can be found [here](https://drive.google.com/open?id=1DPuYh2bD22Hn-IKXw-Ru86LX_FA1B6RA)
 
 ### Acknowledgement
 
