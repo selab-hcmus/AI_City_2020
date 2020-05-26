@@ -103,7 +103,7 @@ Some important path you have to change for successfully running our counter:
 
 + PATH_SCREENSHOT: path to screenshot and movement of challenge
 
-+ PATH_MOI: path to MOI regions. You can access [here]()
++ PATH_MOI: path to MOI regions. You can access [here](https://drive.google.com/open?id=1wMQMGKCXMXPL0G7IL9ionThkoIh4qubF)
 
 + PATH_VIDEO: path to video data of challenge 
 
