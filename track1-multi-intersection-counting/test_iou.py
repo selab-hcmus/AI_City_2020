@@ -34,11 +34,11 @@ if __name__ == "__main__":
     print("Running tracking on ", path_bbox_dla)
     for file_name in os.listdir(path_bbox_dla):
         vid_name = file_name[:-8]
-        if vid_name == "cam_3":
-            data = format_bbox(vid_name, file_name)
-            content_video_path = os.path.join(path_video, vid_name+".mp4")
-            # results = track_viou_edited(content_video_path, data, 0.3, 0.7, 0.6, 13, 6, "KCF", 1.0)
-            results = track_iou_edited(vid_name, data, 0.3, 0.7, 0.15, 10, path_video)
+#         if vid_name == "cam_3":
+        data = format_bbox(vid_name, file_name)
+        content_video_path = os.path.join(path_video, vid_name+".mp4")
+        # results = track_viou_edited(content_video_path, data, 0.3, 0.7, 0.6, 13, 6, "KCF", 1.0)
+        results = track_iou_edited(vid_name, data, 0.3, 0.7, 0.15, 10, path_video)
     # run_tracking_bbox_dla()
     duration = time.time() - duration 
     print("Total tracking time:", duration)
