@@ -286,8 +286,8 @@ def car_counting(vid_name, roi_list, moi_list):
                     cv2.putText(annotate_fr, cur_annotate[4]+"-"+str(count_object).zfill(5), (int(cur_annotate[2]), int(cur_annotate[3])), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 255, 0), 2,cv2.LINE_AA) 
             annotate_fr = draw_text_summarize(annotate_fr, text_summary, width, height)
             output.write(annotate_fr)
-            if idx == 900:
-                break
+#             if idx == 900:
+#                 break
         input.release()
         output.release()
     return results
