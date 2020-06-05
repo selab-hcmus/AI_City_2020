@@ -101,6 +101,8 @@ Some important path you have to change for successfully running our counter:
 
 + PATH_ROI: path to region of interest of challenge
 
++ PATH_RESULTS: path to results of counting
+
 + PATH_SCREENSHOT: path to screenshot and movement of challenge. Annotated json file can be accessed [here](https://drive.google.com/open?id=1c-Ff6lP4xCOjaBer0XB9kIWNhX13ygW3)
 
 + PATH_MOI: path to MOI regions. You can access [here](https://drive.google.com/open?id=1wMQMGKCXMXPL0G7IL9ionThkoIh4qubF)
