@@ -122,6 +122,21 @@ python counter.py
 
 Visualized video of our system can be found [here](https://drive.google.com/open?id=1DPuYh2bD22Hn-IKXw-Ru86LX_FA1B6RA)
 
+### Creating submission csv file
+
+Please ensure that you have counting results from previous phase(it is saved in $PATH_RESULTS$ folder) are ready.
+
+Path you have to specify for successfully produce submission csv file
+
++ PATH_ID_LIST = "./list_video_id.txt" (we have prepared this inside folder submission)
+
++ PATH_COUNTING_RESULTS: path to counting results from previous phase
+
+```
+cd submission
+python submission.py
+```
+
 ### Acknowledgement
 
 Source code for Detector is built based on [CenterNet](https://github.com/xingyizhou/CenterNet.git)
