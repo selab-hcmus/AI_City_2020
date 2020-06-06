@@ -67,7 +67,7 @@ Download pretrained model: [ link ](
 https://www.dropbox.com/s/q9jimptc5e8e2we/model_best_dla_1x.pth?dl=0)
 
 
-**All command above are following the Original Installation of CenterNet:** [link](https://github.com/xingyizhou/CenterNet/blob/master/readme/INSTALL.md)
+**All commands above are following the Original Installation of CenterNet:** [link](https://github.com/xingyizhou/CenterNet/blob/master/readme/INSTALL.md)
 
 #### Training
 ```
