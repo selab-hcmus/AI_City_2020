@@ -99,8 +99,8 @@ def track_iou_edited(vid_name, detections, sigma_l, sigma_h, sigma_iou, t_min, p
             if visualize == True:
                 output.write(frame)
             # print(idx)
-        if idx == 900:
-            break
+#         if idx == 900:
+#             break
         idx += 1
     input.release()
     if visualize == True:

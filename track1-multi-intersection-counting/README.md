@@ -82,7 +82,7 @@ Change following paths inside test_iou.py for running iou tracking.
 
 + path_video: path to your video dataset.
 
-+ path_bbox_dla: path to bbox extracted in previous detecting phase.
++ path_bbox_dla: path to bbox extracted in previous detecting phase or you can access it directly [here](https://drive.google.com/open?id=10tL5q7SPslmDyB5eCwWpqkicP0brEmai)
 
 + PATH_RESULT(inside tracker/iou_tracker.py): tracking results will be saved in this path folder 
 
@@ -96,13 +96,18 @@ python test_iou.py
 ```
 
 ### Reproduce counting
+
 Some important path you have to change for successfully running our counter:
 
 + PATH_ROI: path to region of interest of challenge
 
-+ PATH_SCREENSHOT: path to screenshot and movement of challenge
++ PATH_RESULTS: path to results of counting
 
-+ PATH_VIDEO: path to video data
++ PATH_SCREENSHOT: path to screenshot and movement of challenge. Annotated json file can be accessed [here](https://drive.google.com/open?id=1c-Ff6lP4xCOjaBer0XB9kIWNhX13ygW3)
+
++ PATH_MOI: path to MOI regions. You can access [here](https://drive.google.com/open?id=1wMQMGKCXMXPL0G7IL9ionThkoIh4qubF)
+
++ PATH_VIDEO: path to video data of challenge 
 
 + PATH_TRACKING: path to previous tracking phase results
 
@@ -115,8 +120,33 @@ You can also visualize results video by specifying VISUALIZED variable to True i
 python counter.py
 ```
 
+Visualized video of our system can be found [here](https://drive.google.com/open?id=1DPuYh2bD22Hn-IKXw-Ru86LX_FA1B6RA)
+
+### Creating submission csv file
+
+Please ensure that you have counting results from previous phase(it is saved in $PATH_RESULTS$ folder) are ready.
+
+Path you have to specify for successfully produce submission csv file
+
++ PATH_ID_LIST = "./list_video_id.txt" (we have prepared this inside folder submission)
+
++ PATH_COUNTING_RESULTS: path to counting results from previous phase
+
+```
+cd submission
+python submission.py
+```
+
 ### Acknowledgement
 
 Source code for Detector is built based on [CenterNet](https://github.com/xingyizhou/CenterNet.git)
 
 Source code for tracking car is built based on iou tracking of [High-Speed Tracking-by-Detection Without Using Image Information](https://github.com/bochinski/iou-tracker)
+
+### Contact Information
+
+If you have any questions, please contact:
+
++ Nguyen Trong Tung(ntrtung17@apcs.vn)
+
++ Nguyen Xuan Vy(xuanvy99@gmail.com)
