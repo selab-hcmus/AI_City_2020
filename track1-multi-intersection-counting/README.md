@@ -43,6 +43,11 @@ python setup.py install --user
 
 #### Install Detector
 ```
+conda create --name CenterNet python=3.6
+conda activate CenterNet
+conda install pytorch=0.4.1 torchvision -c pytorch
+sed -i "1254s/torch\.backends\.cudnn\.enabled/False/g" ${PYTORCH}/torch/nn/functional.py
+
 cd AIC20/track1-multi-intersection-counting
 CenterNet_ROOT = 'CenterNet'
 cd $CenterNet_ROOT
@@ -60,6 +65,9 @@ python setup.py build develop
 #### Pretrained Model - DLA
 Download pretrained model: [ link ](
 https://www.dropbox.com/s/q9jimptc5e8e2we/model_best_dla_1x.pth?dl=0)
+
+
+**All command above are following the Original Installation of CenterNet:** [link](https://github.com/xingyizhou/CenterNet/blob/master/readme/INSTALL.md)
 
 #### Training
 ```

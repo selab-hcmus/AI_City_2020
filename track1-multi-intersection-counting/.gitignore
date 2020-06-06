@@ -32,7 +32,7 @@ draw_path_vehicle.py
 experiment_centernet.py
 experiment_dla_resnet.py
 format_moi.py
-main.py
+# main.py
 screenshot_extract_frame.py
 test.jpg
 visualized.py
