@@ -31,7 +31,7 @@ I ran this code with **NVIDIA Tesla K80**.
 
 5. Unzip labels, then move all json files to 'CenterNet/data/abc/labels'.
 
-#### Install COCOAPI
+#### Install COCOAPI (1)
 ```
 cd AIC20/track1-multi-intersection-counting
 COCOAPI = 'cocoapi'
@@ -41,7 +41,7 @@ make
 python setup.py install --user
 ```
 
-#### Install Detector
+#### Install Detector (2)
 ```
 conda create --name CenterNet python=3.6
 conda activate CenterNet
@@ -56,13 +56,13 @@ cd $CenterNet_ROOT/src/lib/external
 python setup.py build_ext --inplace
 ```
 
-#### Install DCN2
+#### Install DCN2 (3)
 ```
 cd $CenterNet_ROOT/src/lib/models/networks/DCNv2
 python setup.py build develop
 ```
 
-**All commands above are following the Original Installation of CenterNet:** [link](https://github.com/xingyizhou/CenterNet/blob/master/readme/INSTALL.md)
+**All commands above (1),(2),(3) are following the Original Installation of CenterNet:** [link](https://github.com/xingyizhou/CenterNet/blob/master/readme/INSTALL.md)
 
 #### Pretrained Model - DLA
 Download pretrained model: [ link ](

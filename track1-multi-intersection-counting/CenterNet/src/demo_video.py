@@ -36,6 +36,7 @@ def demo(opt):
     # debugger = Debugger(dataset=opt.dataset, theme=opt.debugger_theme)
 
     for video_path in sorted(video_paths):
+        print(video_path)
         bboxes = []
         video = cv2.VideoCapture(video_path)
         width, height = int(video.get(cv2.CAP_PROP_FRAME_WIDTH)), int(video.get(cv2.CAP_PROP_FRAME_HEIGHT))
