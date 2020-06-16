@@ -41,7 +41,7 @@ def main(opt):
 
     print('Setting up data...')
     val_loader = torch.utils.data.DataLoader(
-        Dataset(opt, 'val'),
+        Dataset(opt, 'test'),
         batch_size=1,
         shuffle=False,
         num_workers=1,
