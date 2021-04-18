@@ -1,15 +1,14 @@
-import tensorflow as tf
 import os
-import time
-import numpy as np
 import pickle
+import time
 
+import numpy as np
+import tensorflow as tf
 
-from models import generator
-from utils import DataLoader, load, save, psnr_error
-from constant import const
 import evaluate
-
+from constant import const
+from models import generator
+from utils import DataLoader, load, psnr_error
 
 slim = tf.contrib.slim
 

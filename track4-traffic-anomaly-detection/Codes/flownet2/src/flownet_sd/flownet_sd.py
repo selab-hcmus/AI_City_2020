@@ -1,8 +1,9 @@
+# from ..downsample import downsample
+import tensorflow as tf
+
 from ..net import Net, Mode
 from ..utils import LeakyReLU, average_endpoint_error, pad, antipad
-# from ..downsample import downsample
-import math
-import tensorflow as tf
+
 slim = tf.contrib.slim
 
 

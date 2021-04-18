@@ -1,10 +1,12 @@
-from ..net import Net, Mode
+import tensorflow as tf
+
+from ..downsample import downsample
+from ..flow_warp import flow_warp
 from ..flownet_css.flownet_css import FlowNetCSS
 from ..flownet_sd.flownet_sd import FlowNetSD
-from ..flow_warp import flow_warp
+from ..net import Net, Mode
 from ..utils import LeakyReLU, average_endpoint_error, pad, antipad
-from ..downsample import downsample
-import tensorflow as tf
+
 slim = tf.contrib.slim
 
 

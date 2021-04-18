@@ -1,5 +1,7 @@
 from __future__ import print_function
+
 import numpy as np
+
 # video_names = [1, 32, 35, 46, 64, 68, 82]
 video_names = [32, 35]
 for video_name in video_names:

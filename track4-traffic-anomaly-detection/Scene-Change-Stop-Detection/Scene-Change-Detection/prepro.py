@@ -1,6 +1,7 @@
-import json
 import glob
+import json
 import os
+
 import cv2
 
 cuts_dir = '../aic19-track3-test-data/cuts'

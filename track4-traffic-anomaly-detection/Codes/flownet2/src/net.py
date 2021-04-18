@@ -1,13 +1,16 @@
 import abc
-from enum import Enum
 import os
-import tensorflow as tf
-from .flowlib import flow_to_image, write_flow
-import numpy as np
+import uuid
+from enum import Enum
+
 # from scipy.misc import imread, imsave, imresize
 import cv2
-import uuid
+import numpy as np
+import tensorflow as tf
+
+from .flowlib import flow_to_image, write_flow
 from .training_schedules import LONG_SCHEDULE
+
 slim = tf.contrib.slim
 
 os.environ['CUDA_DEVICES_ORDER'] = "PCI_BUS_ID"

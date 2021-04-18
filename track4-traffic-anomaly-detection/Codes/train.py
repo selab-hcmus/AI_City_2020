@@ -1,11 +1,12 @@
-import tensorflow as tf
 import os
-
-from models import generator, discriminator, flownet, initialize_flownet
-from loss_functions import intensity_loss, gradient_loss
-from utils import DataLoader, load, save, psnr_error
-from constant import const
 import time
+
+import tensorflow as tf
+
+from constant import const
+from loss_functions import intensity_loss, gradient_loss
+from models import generator, discriminator, flownet, initialize_flownet
+from utils import DataLoader, load, save, psnr_error
 
 os.environ['CUDA_DEVICES_ORDER'] = "PCI_BUS_ID"
 os.environ['CUDA_VISIBLE_DEVICES'] = const.GPU

@@ -1,13 +1,10 @@
 import tensorflow as tf
 
-import unet
 import pix2pix
-
-from flownet2.src.flowlib import flow_to_image
+import unet
 from flownet2.src.flownet_sd.flownet_sd import FlowNetSD  # Ok
-from flownet2.src.training_schedules import LONG_SCHEDULE
 from flownet2.src.net import Mode
-
+from flownet2.src.training_schedules import LONG_SCHEDULE
 
 slim = tf.contrib.slim
 

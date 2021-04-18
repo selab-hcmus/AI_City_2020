@@ -1,6 +1,6 @@
-import tensorflow as tf
-import numpy as np
 import math
+import numpy as np
+import tensorflow as tf
 
 BATCH_SIZE = 8
 HEIGHT = 30

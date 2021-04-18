@@ -1,7 +1,9 @@
-import numpy as np
 from pathlib import Path
-from PIL import Image, ImageDraw
+
+import numpy as np
 import tensorflow as tf
+from PIL import Image, ImageDraw
+
 
 def get_threshold(metric, box):
     if metric == "l2":
@@ -76,7 +78,6 @@ if __name__ == "__main__":
         frames_path = frames_all_path / str(video_id)
         threshold = get_threshold(metric, box)
         draw_test(frames_path, video_id, start_frame - offset, box)
-        #continue
         print("Debug: video {}, max diff = {}, gt = {}".format(video_id, threshold, gt_sec * 30))
 
         base = get_frame(frames_path, start_frame - offset, box)
@@ -101,4 +102,3 @@ if __name__ == "__main__":
     with open(output_file_path, 'w') as f:
         for result in results:
             print(*result, sep=',')
-    

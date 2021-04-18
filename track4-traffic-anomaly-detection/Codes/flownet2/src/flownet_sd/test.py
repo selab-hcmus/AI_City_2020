@@ -1,7 +1,8 @@
 import argparse
 import os
-from ..net import Mode
+
 from .flownet_sd import FlowNetSD
+from ..net import Mode
 
 FLAGS = None
 

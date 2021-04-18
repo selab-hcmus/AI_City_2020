@@ -1,7 +1,7 @@
-import cv2
-import numpy as np
 import glob
- 
+
+import cv2
+
 img_array = []
 for filename in glob.glob('/home/datthanh/future_frame/images/*.png'):
     print(filename)

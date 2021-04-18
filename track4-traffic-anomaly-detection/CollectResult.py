@@ -1,4 +1,3 @@
-import numpy as np
 import Config
 
 g = open(Config.output_path + '/result_all.txt', 'w')
