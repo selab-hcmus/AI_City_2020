@@ -148,7 +148,7 @@ python submission.py
 
 Source code for Detector is built based on [CenterNet](https://github.com/xingyizhou/CenterNet.git)
 
-Source code for tracking car is built based on iou tracking of [High-Speed Tracking-by-Detection Without Using Image Information](https://github.com/bochinski/iou-tracker)
+Source code for tracking car is built based on IoU tracking of [High-Speed Tracking-by-Detection Without Using Image Information](https://github.com/bochinski/iou-tracker)
 
 ### Contact Information
 

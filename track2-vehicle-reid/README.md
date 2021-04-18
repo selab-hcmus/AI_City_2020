@@ -1,6 +1,6 @@
 # SELab - AICityChallenge 2020 - Track2: Vehicle Reidentification
 ------
-This is our implementation for the soulution submitted to Track2 [AICityChallenge 2020](https://www.aicitychallenge.org/). This track focuses on solving vehicle reidentification problem.
+This is our implementation for the solution submitted to Track2 [AICityChallenge 2020](https://www.aicitychallenge.org/). This track focuses on solving vehicle reidentification problem.
 This year, three members from our group worked on different experiments with TripletNet, SiameseNet to tackle the mentioned challenge.
 Repositories from other colleagues are mentioned below:
 1. From `vltanh` (HCMUS-CNTN2016): [pytorch-reidentification](https://github.com/vltanh/pytorch-reidentification)
