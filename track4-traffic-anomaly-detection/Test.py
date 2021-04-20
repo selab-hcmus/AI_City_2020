@@ -1,6 +1,7 @@
 import os
 
 import matplotlib.pyplot as plt
+import matplotlib.ticker as mtick
 
 import Config
 from AnomalyDetector import AnomalyDetector
@@ -75,6 +76,11 @@ for video_id in range(1, 101):
     print(confs)
     f = plt.figure()
     plt.plot(list(confs.keys()), list(confs.values()), lw=4)
+    plt.xlabel('Frame')
+    plt.xlim(left=0)
+    plt.ylabel('Confidence')
+    plt.ylim(bottom=0)
+    plt.gca().yaxis.set_major_formatter(mtick.PercentFormatter(1))
     f.savefig(Config.output_path + '/' + str(video_id) + '/' + str(video_id) + '_anomaly.pdf', bbox_inches='tight')
     plt.close(f)
     f = open(Config.output_path + '/' + str(video_id) + '/' + str(video_id) + '_anomaly.txt', 'w')
