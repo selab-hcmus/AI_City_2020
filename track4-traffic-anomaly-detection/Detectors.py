@@ -1,12 +1,14 @@
-import numpy as  np
-from Misc import BoundingBox, Image
-import Config
+import json
 import os
 import pickle
+
+import colour
 import cv2
 import matplotlib.pyplot as plt
-import colour
-import json
+import numpy as np
+
+import Config
+from Misc import BoundingBox, Image
 
 #input detected bounding boxes (text file)
 #get result by function detect
@@ -19,7 +21,7 @@ class DetectorDay:
         self.initialize(self.result, result_file)
         self.result_nclas = {}
         self.initialize(self.result_nclas, result_file_nclas)
-        self.need_nclass = [6, 11, 46, 78, 86, 96]
+        self.need_nclass = [20]
 
     def initialize(self, result, result_file):
         f = open(result_file, 'r')
@@ -27,16 +29,12 @@ class DetectorDay:
         for i in range(0, len(lines)):
             split = lines[i].split(' ')
             name = split[0]
-            # print(name.split('/'))
             video_id = int(name.split('/')[0])
             frame_id = int(name.split('/')[1][:-4][7:])
             if not video_id in result.keys():
                 result[video_id] = {}
             result[video_id][frame_id] = []
-            # print(video_id, frame_id)
-            # print(split)
             for j in range(1, len(split) - 1, 5):
-                # print(split[j + 0], split[j + 1], split[j + 2], split[j + 3], split[j + 4])
                 box = BoundingBox(float(split[j + 0]), float(split[j + 1]), float(split[j + 2]), float(split[j + 3]),
                                   float(split[j + 4]))
                 result[video_id][frame_id].append(box)
@@ -84,7 +82,6 @@ class DayNightDetector:
     def __init__(self):
         self.night_videos = np.zeros(101, np.int)
         self.video_path = Config.data_path + '/average_image'
-        #self.initialize()
         self.temp_initialize()
 
     def temp_initialize(self):
@@ -96,15 +93,10 @@ class DayNightDetector:
         return (self.night_videos[video_id] == 1)
 
     def initialize(self):
-        # fig_size = plt.rcParams["figure.figsize"]
-        # fig_size[0] = 14
-        # fig_size[1] = 5
-        # plt.rcParams["figure.figsize"] = fig_size
         f = open('gt.txt', 'r')
         cc = []
         for video_id in range(1, 101):
             print(video_id)
-
             image = cv2.cvtColor(Image.load(self.video_path + '/' + str(video_id) + '/average10.jpg'), cv2.COLOR_BGR2RGB)
             image = image[: int(image.shape[0] / 2), :]
             w = image.shape[1] // 5
@@ -120,7 +112,6 @@ class DayNightDetector:
 
             hBin = 360
             vBin = 255
-            #hHist, hX = np.histogram([hsvIm[x][y][0] for x in range(0, h) for y in range(0, w) if hsvIm[x][y][1] < 125], hBin, (0, 360))
             hHist, hX = np.histogram(hsvIm[:, :, 0].flatten(), hBin, (0, 360))
             vHist, vX = np.histogram(hsvIm[:, :, 2].flatten(), vBin, (0, 255))
 
@@ -136,31 +127,8 @@ class DayNightDetector:
                 result = 'day'
             gt = f.readline()[:-1]
             print(result, gt)
-            #result = gt
             cc.append((nH, nV, gt))
 
-            # if nH < 0.654 and nH > 0.04:
-            #     if nV > 0.126 and nV < 0.197:
-            #         result = 'day'
-            #     else:
-            #         result = 'night'
-            # else:
-            #     if nV > 0.108:
-            #         if nH < 0.57:
-            #             result = 'day'
-            #         else:
-            #             result = 'night'
-            #     else:
-            #         result = 'night'
-
-            # if (result != gt):
-            #     fig, (ax1, ax2, ax3) = plt.subplots(1, 3)
-            #     ax1.plot(hX[:-1], hHist, color='r')
-            #     #ax1.plot(_[:-1], sHist, color='g')
-            #     ax2.plot(vX[:-1], vHist, color='b')
-            #     ax3.set_title(result)
-            #     ax3.imshow(image)
-            #     plt.show()
         dayList = [x for x in cc if (x[2] == 'day')]
         nightList = [x for x in cc if (x[2] == 'night')]
         plt.scatter([x[0] for x in dayList], [x[1] for x in dayList], c = 'r')
@@ -178,14 +146,12 @@ class DetectorDay5fps:
         for i in range(0, len(lines)):
             split = lines[i].split(' ')
             name = split[0]
-            # print(name.split('/'))
             video_id = int(name.split('/')[0])
             frame_id = int(name.split('/')[1][:-4][7:])
             if not video_id in self.result.keys():
                 self.result[video_id] = {}
             self.result[video_id][frame_id] = []
             for j in range(1, len(split) - 1, 5):
-                # print(split[j + 0], split[j + 1], split[j + 2], split[j + 3], split[j + 4])
                 box = BoundingBox(float(split[j + 0]), float(split[j + 1]), float(split[j + 2]), float(split[j + 3]),
                                   float(split[j + 4]))
                 self.result[video_id][frame_id].append(box)
@@ -245,32 +211,6 @@ class JapDetector:
         return self.result[video_id][frame_id]
 
 if __name__ == '__main__':
-    # # detectorDay = DetectorDay5fps(Config.data_path + '/5fps_result_8_3*3_clas.txt')
-    # # #detectorNight = DetectorNight(Config.data_path + '/extracted-bboxes-dark-videos')
-    # # detectorDay = DetectorDay(Config.data_path + '/result_8_3_3_clas.txt', Config.data_path + '/result_8_3_3_nclas.txt')
-    # # detector = detectorDay
-    # #detector = JapDetector(Config.data_path + '/bbox_detector1_mini.json', Config.data_path + '/All_videos_Japanese_Deep_Driving_mini.json')
-    # detector = JapDetector(Config.data_path + '/bbox_detector2.json', Config.data_path + '/All_videos_Japanese_Deep_Driving_2.json')
-    # video_id = 80
-    # start_frame = 980
-    # img_paths = os.listdir(Config.data_path + '/average_image_10fps/' + str(video_id))
-    # for i in range(start_frame, len(img_paths) + 1):
-    #     if (i % 10 == 0):
-    #         print(i)
-    #         im = cv2.cvtColor(cv2.imread(Config.data_path + '/average_image_10fps/' + str(video_id) +'/average' + str(i + 1) + '.jpg'), cv2.COLOR_BGR2RGB)
-    #         frame_id = i
-    #         boxes = detector.detect(video_id, frame_id)
-    #         for j in range(0, len(boxes)):
-    #             if (boxes[j].score > 0.8):
-    #                 im = cv2.rectangle(im, (boxes[j].x1, boxes[j].y1), (boxes[j].x2, boxes[j].y2), (0, 255, 0), 3)
-    #                 im = cv2.putText(im, "%.2f" % (boxes[j].score), (boxes[j].x1, boxes[j].y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2, cv2.LINE_AA)
-    #                 plt.imshow(im)
-    #         plt.show()
-    #
-    # #dayNightDetector = DayNightDetector()
-    #
-    #
-    # #detector = JapDetector2(Config.data_path + '/bbox_detector2.json', Config.data_path + '/All_videos_Japanese_Deep_Driving_2.json')
 
     detectorDay = DetectorDay(Config.data_path + '/32.txt', Config.data_path + '/32_result_8_3_3_nclas.txt')
     detector = detectorDay
@@ -280,9 +220,9 @@ if __name__ == '__main__':
         im_name = lines.split(' ')[0]
         video_id = int(im_name.split('/')[0])
         frame_id = int(im_name.split('/')[1][7:-4])
-        img_paths = os.listdir(Config.data_path1 + '/average_image/' + str(video_id))
+        img_paths = os.listdir(Config.data_path + '/average_image/' + str(video_id))
         print(video_id, frame_id)
-        im = cv2.cvtColor(cv2.imread(Config.data_path1 + '/average_image/' + str(video_id) +'/average' + str(frame_id) + '.jpg'), cv2.COLOR_BGR2RGB)
+        im = cv2.cvtColor(cv2.imread(Config.data_path + '/average_image/' + str(video_id) +'/average' + str(frame_id) + '.jpg'), cv2.COLOR_BGR2RGB)
         boxes = detector.detect(video_id, frame_id)
         for j in range(0, len(boxes)):
             if (boxes[j].score > 0):

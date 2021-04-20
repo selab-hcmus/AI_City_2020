@@ -1,7 +1,7 @@
+from .flownet_cs import FlowNetCS
 from ..dataloader import load_batch
 from ..dataset_configs import FLYING_CHAIRS_DATASET_CONFIG
 from ..training_schedules import LONG_SCHEDULE
-from .flownet_cs import FlowNetCS
 
 # Create a new network
 net = FlowNetCS()

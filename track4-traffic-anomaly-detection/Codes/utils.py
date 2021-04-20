@@ -1,11 +1,12 @@
-import tensorflow as tf
-import numpy as np
-from collections import OrderedDict
-import os
 import glob
-import cv2
-from constant import const
+import os
+from collections import OrderedDict
 
+import cv2
+import numpy as np
+import tensorflow as tf
+
+from constant import const
 
 rng = np.random.RandomState(2017)
 

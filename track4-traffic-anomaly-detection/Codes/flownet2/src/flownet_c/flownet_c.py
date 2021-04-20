@@ -1,9 +1,9 @@
-from ..net import Net, Mode
-from ..utils import LeakyReLU, average_endpoint_error, pad, antipad
+import tensorflow as tf
 from ..correlation import correlation
 from ..downsample import downsample
-import math
-import tensorflow as tf
+from ..net import Net, Mode
+from ..utils import LeakyReLU, average_endpoint_error, pad, antipad
+
 slim = tf.contrib.slim
 
 

@@ -1,7 +1,8 @@
 from __future__ import print_function
-from scipy import interpolate
-from matplotlib import pyplot as plt
+
 import numpy as np
+from matplotlib import pyplot as plt
+
 
 def smooth(x,window_len=11,window='hanning'):
     """smooth the data using a window with requested size.

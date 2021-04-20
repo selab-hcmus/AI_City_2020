@@ -1,12 +1,8 @@
-#data_path = 'E:/Thesis/BackupPlan/Data'
-#data_path = 'E:/APCS/Thesis/Codes/Data'
-#data_path1 = '/media/tuanbi97/Tuanbi97/APCS/Thesis/Codes/AICityChallenge2018_rank2/py-faster-rcnn/data'
-data_path = 'F:\\Workspace\\aicity2020\\preprocessed_data'
-dataset_path = 'F:\\Datasets\\AIC20_track4\\test-data'
-#dataset_path = 'E:/Datasets/aic19-track3-test-data'
-fps = 30
-output_path = data_path + '\\output_demo'
+dataset_path = '~/Datasets/AI city challenge/AIC20_track4/test-data'
+data_path = '~/AI_City_2020/track4-traffic-anomaly-detection/preprocessed_data'
+output_path = data_path + '/output_demo'
 
+fps = 30
 box_threshold = 0.5
 aevent_overlap_ratio = 0.2
 aevent_iou = 0.2

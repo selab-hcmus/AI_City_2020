@@ -1,11 +1,10 @@
 import argparse
-import sys
-import numpy as np
-import cv2
+import glob
 import json
 import os
-import glob
-from tqdm import tqdm
+import sys
+
+import cv2
 
 
 def LBP(frame):

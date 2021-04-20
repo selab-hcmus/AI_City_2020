@@ -1,10 +1,10 @@
 import argparse
-import sys
-import numpy as np
-import cv2
+import glob
 import json
 import os
-import glob
+import sys
+
+import cv2
 from tqdm import tqdm
 
 

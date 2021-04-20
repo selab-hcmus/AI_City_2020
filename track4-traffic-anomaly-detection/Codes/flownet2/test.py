@@ -1,9 +1,11 @@
 import os
-import tensorflow as tf
-import numpy as np
-from scipy.misc import imread
+
 import matplotlib
+import tensorflow as tf
+from scipy.misc import imread
+
 from src.flowlib import read_flow, flow_to_image
+
 matplotlib.use('TKAgg')
 import matplotlib.pyplot as plt
 

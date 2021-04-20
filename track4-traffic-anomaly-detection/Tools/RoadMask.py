@@ -1,9 +1,9 @@
-import cv2
+import json
+
 import Config
+import cv2
 import matplotlib.pyplot as plt
 import numpy as np
-import json
-import colour
 
 class RoadMask:
     def __init__(self, mask_path, scene_path, im_path):
@@ -48,22 +48,3 @@ class RoadMask:
 
 if __name__ == '__main__':
     list = RoadMask(Config.data_path + '/masks', Config.data_path + '/unchanged_scene_periods.json', Config.data_path + '/average_image')
-
-    # video_id = 1
-    # mask = list.getMask(video_id, 1)
-    # mask = (mask * 255).astype(int)
-    # mask = np.dstack((mask, mask, mask))
-    # fig, (ax1, ax2) = plt.subplots(1, 2)
-    # ax1.imshow(mask)
-    # im = cv2.cvtColor(cv2.imread(Config.data_path + '/average_image/' + str(video_id) + '/average145.jpg'),
-    #                   cv2.COLOR_BGR2RGB)
-    # im = cv2.addWeighted(im.astype(int), 1, mask, 0.5, 0.0)
-    # ax2.imshow(im)
-    # plt.show()
-
-    # video_id = 19
-    # im = cv2.cvtColor(cv2.imread(Config.data_path + '/average_image/' + str(video_id) + '/average10.jpg'), cv2.COLOR_BGR2RGB)
-    # im = cv2.GaussianBlur(im, (9, 9), 0)
-    # im = cv2.bilateralFilter(im, 9, 75, 75)
-    # plt.imshow(im)
-    # plt.show()

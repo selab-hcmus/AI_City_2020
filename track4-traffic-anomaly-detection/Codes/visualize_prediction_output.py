@@ -4,16 +4,14 @@ import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 import tensorflow as tf
 import os
-import time
 import numpy as np
-import pickle
 import cv2
 
 
 from models import generator
-from utils import DataLoader, load, save, psnr_error, diff_mask
+from utils import DataLoader, load, psnr_error, diff_mask
 from constant import const
-import evaluate
+
 
 def calculate_score(psnrs):
    scores = np.array([], dtype=np.float32) 

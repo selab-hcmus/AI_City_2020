@@ -1,8 +1,9 @@
-from ..net import Net, Mode
+import tensorflow as tf
+
+from ..flow_warp import flow_warp
 from ..flownet_c.flownet_c import FlowNetC
 from ..flownet_s.flownet_s import FlowNetS
-from ..flow_warp import flow_warp
-import tensorflow as tf
+from ..net import Net, Mode
 
 
 class FlowNetCS(Net):

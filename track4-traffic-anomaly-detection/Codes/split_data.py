@@ -1,6 +1,8 @@
 import os
+
 import cv2
 import numpy as np
+from .. import Config
 
 def sigmoid(x):
     return (1 / (1 + np.exp(-x))).astype(np.float32)
@@ -9,23 +11,11 @@ def diff(frame1, frame2):
     prev = cv2.cvtColor(frame1, cv2.COLOR_BGR2GRAY)
     gray = cv2.cvtColor(frame2, cv2.COLOR_BGR2GRAY)
     sub = np.abs(gray.astype(np.float32) - prev.astype(np.float32))
-    #print('sum diff 1: ', np.sum(sub), np.max(sub))
-    # if (frame_id > 210):
-    #     plt.imshow(sub, cmap='gray')
-    #     plt.show()
     sub = sigmoid(sub - 40)
-    #print('sum diff 2: ', np.sum(sub), np.max(sub))
-    # if (frame_id > 210):
-    #     plt.imshow(sub, cmap='gray')
-    #     plt.show()
     diff = int(np.sum(sub))
     return (diff > 10)
 
-# data_path = '../Data/ai_city/training/videos/origin/aic19-track3-test-data'
-data_path = '../../AIC20/AIC20_track4/test-data/'
-
 #mini training
-# output_path = '../Data/ai_city/training/frames/mini'
 output_path = '../data/training/frames/mini'
 videos = [1, 32, 35, 46, 64, 68, 82]
 interval = {
@@ -41,7 +31,7 @@ interval = {
 alpha = 0.5
 
 for video_id in videos:
-    video_path = os.path.join(data_path, str(video_id) + '.mp4')
+    video_path = os.path.join(Config.dataset_path, str(video_id) + '.mp4')
     print(video_path)
     save_path = os.path.join(output_path, 'blend', str(video_id))
     origin_path = os.path.join(output_path, 'origin', str(video_id))
@@ -75,7 +65,6 @@ for video_id in videos:
     cap.release()
 
 #mini testing
-# output_path = '../Data/ai_city/testing/frames/mini-test'
 output_path = '../data/testing/frames/mini-test'
 videos = [8, 15, 16, 23, 33, 45]
 interval = {
@@ -90,7 +79,7 @@ interval = {
 alpha = 0.5
 
 for video_id in videos:
-    video_path = os.path.join(data_path, str(video_id) + '.mp4')
+    video_path = os.path.join(Config.dataset_path, str(video_id) + '.mp4')
     save_path = os.path.join(output_path, 'blend', str(video_id))
     origin_path = os.path.join(output_path, 'origin', str(video_id))
     if not os.path.exists(save_path):
@@ -123,7 +112,6 @@ for video_id in videos:
     cap.release()
 
 #mini challenge
-# output_path = '../Data/ai_city/testing/frames/mini-challenge'
 output_path = '../data/testing/frames/mini-challenge'
 videos = [1, 32, 35, 46, 64, 68, 82]
 interval = {
@@ -139,7 +127,7 @@ interval = {
 alpha = 0.5
 
 for video_id in videos:
-    video_path = os.path.join(data_path, str(video_id) + '.mp4')
+    video_path = os.path.join(Config.dataset_path, str(video_id) + '.mp4')
     save_path = os.path.join(output_path, 'blend', str(video_id))
     origin_path = os.path.join(output_path, 'origin', str(video_id))
     if not os.path.exists(save_path):

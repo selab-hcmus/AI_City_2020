@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
-import tensorflow as tf
 import copy
+
+import tensorflow as tf
+
 slim = tf.contrib.slim
 
 _preprocessing_ops = tf.load_op_library(

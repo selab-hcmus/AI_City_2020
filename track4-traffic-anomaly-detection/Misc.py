@@ -1,6 +1,7 @@
 import cv2
-import Config
 import numpy as np
+
+import Config
 
 class BoundingBox:
     def __init__(self, x1, y1, x2, y2, score):
@@ -28,7 +29,6 @@ class Image:
     @staticmethod
     def load(img_path):
         im = cv2.imread(img_path)
-        #im = cv2.cvtColor(cv2.imread(img_path), cv2.COLOR_BGR2RGB)
         return im
 
     @staticmethod
@@ -62,4 +62,3 @@ class Image:
     @staticmethod
     def save(im, path):
         cv2.imwrite(path, im)
-

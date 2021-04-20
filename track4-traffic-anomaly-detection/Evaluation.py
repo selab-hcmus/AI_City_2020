@@ -1,4 +1,3 @@
-import numpy as np
 class Evaluation:
     def __init__(self, gt_path):
         #parse grouth truth

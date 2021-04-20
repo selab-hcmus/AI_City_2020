@@ -6,14 +6,13 @@ Created on Tue Jan 22 11:21:20 2019
 @author: peterluong
 """
 
-import numpy as np
-import os
-import skvideo.io
-import cv2
 import json
+
+import cv2
 import imageio
-from sklearn.preprocessing import normalize
 import matplotlib.pyplot as plt
+import numpy as np
+
 
 def sigmoid(x):
     return (1 / (1 + np.exp(-x))).astype(np.float32)
@@ -93,15 +92,12 @@ def extractMask(video_id):
                 frame_id += 30
 
                 if (success):
-                    #print(frame_id)
                     sub = sigmoid((np.abs(frame - prev)) - 125)
                     temp = temp + sub
                 else:
                     break
             temp = np.sum(temp, 2)
-            #temp = normalize(temp.reshape(1, 410*800)).reshape(410,800)
             mask = (temp > 0.2).astype(np.uint8)
-            #mask = cv2.blur(mask, (3,3))
 
             np.save('masks_refine_non_expand/mask_%d_%d.npy' %(vid, scenes_id), mask)
 
@@ -116,17 +112,6 @@ def extractMask(video_id):
 
             mask = region_extract(mask.copy(), threshold_s=2000)
 
-            # for count in range(15):
-            #     mask2 = np.zeros_like(mask)
-            #     for i in range(1, mask.shape[0] - 1):
-            #         for j in range(1, mask.shape[1] - 1):
-            #             mask2[i,j] = max([mask[i-1,j], mask[i,j], mask[i+1,j],
-            #                   mask[i-1,j-1], mask[i,j-1], mask[i+1,j-1],
-            #                   mask[i-1,j+1], mask[i,j+1], mask[i+1,j+1]])
-            #     mask = mask2
-
-            # mask = region_extract(mask.copy(), threshold_s=1000)
-            #
             for count in range(15):
                 mask2 = np.zeros_like(mask)
                 for i in range(1, mask.shape[0] - 1):
@@ -136,7 +121,6 @@ def extractMask(video_id):
                               mask[i-1,j+1], mask[i,j+1], mask[i+1,j+1]])
                 mask = mask2
 
-            #mask = cv2.resize(mask, (800,410))
             mask = cv2.blur(mask, (5,5))
             np.save('masks_refine_v3/mask_%d_%d.npy' %(vid, scenes_id), mask)
             imageio.imwrite('masks/%d_%d.jpg' %(vid, scenes_id), mask.reshape(410,800,1).astype(np.uint8) * mid_frame)
@@ -168,14 +152,6 @@ def expandMask(video_id, scene_id):
     np.save(mask_path, mask)
 
 if __name__== '__main__':
-    # extract mask
-    # videos = [45, 61, 84, 89]
-    # videos = [61, 45, 84]
-    # videos = [51]
-    # for c in videos:
-    #     extractMask(video_id = c)
-
-    # expandMask(video_id = 46, scene_id = 1)
 
     #visualize extracted masks
     verifyMask(video_id = 51, scene_id = 1, expand = True)

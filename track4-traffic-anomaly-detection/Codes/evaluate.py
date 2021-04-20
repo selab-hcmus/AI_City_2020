@@ -1,13 +1,12 @@
+import argparse
+import glob
+import json
+import os
+import pickle
+
 import numpy as np
 import scipy.io as scio
-import os
-import argparse
-import pickle
 from sklearn import metrics
-import json
-import socket
-import glob
-
 
 # data folder contain all datasets, such as ped1, ped2, avenue, shanghaitech, etc
 # DATA_DIR = '/media/DATA/VAD_datasets'#'../Data'

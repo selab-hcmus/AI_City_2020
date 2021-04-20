@@ -1,6 +1,5 @@
-import numpy as np
 import cv2
-from Misc import BoundingBox, Image
+from Misc import Image
 import Config
 
 class AnomalyEvent:
@@ -46,32 +45,6 @@ class AnomalyEvent:
         return False, dist
 
     def checkContains(self, box):
-        # method 1
-        # if (self.overlapRatio(box) > Config.aevent_overlap_ratio) or (self.radiusRestrict(box)):
-        #     return True
-        # else:
-        #     return False
-
-        # method 2
-        # isInEvent = False
-        # min_dist = 1000000000.0
-        # for event_box in self.boxes:
-        #     allow, dist = self.radiusRestrict(event_box, box)
-        #     if allow:
-        #         isInEvent = True
-        #         if dist < min_dist: min_dist = dist
-        # return isInEvent, min_dist
-
-        # method 3
-        # isInEvent = False
-        # max_dist = -1.0
-        # for event_box in self.boxes:
-        #     IoU = self.IoU(event_box, box)
-        #     if IoU > Config.aevent_iou:
-        #         isInEvent = True
-        #         if IoU > max_dist: max_dist = IoU
-        # return isInEvent, max_dist
-
         #method 4
         isInEvent = False
         max_dist = -1.0
@@ -115,12 +88,8 @@ class AnomalyDetector:
         self.prevEvents = {}
 
     def addBoxes(self, boxes, time):
-        #print('before: ',self.events.keys())
-        #print('len boxes: ', len(boxes))
         for box in boxes:
-            #print('box_score:', box.score)
             if box.score < Config.box_threshold: continue
-            #print('adding: ', box.x1, box.y1)
             lc = 0
             max_dist = -1.0
             pevent = None
@@ -138,7 +107,6 @@ class AnomalyDetector:
             if lc == 0:
                 self.events[self.nextId] = AnomalyEvent(box, time, self.nextId)
                 self.nextId += 1
-        #print('after: ', self.events.keys())
 
     def examineEvents(self, video_id, scene_id, time, isEnd, file):
         ret = []
@@ -193,7 +161,6 @@ class AnomalyDetector:
         return ret, currentConf
 
     def drawEvents(self, im):
-        #print(self.events.keys())
         for key in self.events.keys():
             event = self.events[key]
             if event.status == 0:
