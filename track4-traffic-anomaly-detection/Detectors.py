@@ -21,7 +21,7 @@ class DetectorDay:
         self.initialize(self.result, result_file)
         self.result_nclas = {}
         self.initialize(self.result_nclas, result_file_nclas)
-        self.need_nclass = [6, 11, 46, 78, 86, 96]
+        self.need_nclass = [20]
 
     def initialize(self, result, result_file):
         f = open(result_file, 'r')
