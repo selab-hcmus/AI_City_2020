@@ -74,10 +74,10 @@ for video_id in range(1, 101):
     #output anomaly graph text before, anomaly_graph_after, anomaly_graph before, anomaly_graph after, result metric
     print(confs)
     f = plt.figure()
-    plt.plot(confs.keys(), [confs[key] for key in confs.keys()])
+    plt.plot(list(confs.keys()), list(confs.values()), lw=4)
     f.savefig(Config.output_path + '/' + str(video_id) + '/' + str(video_id) + '_anomaly.pdf', bbox_inches='tight')
     plt.close(f)
     f = open(Config.output_path + '/' + str(video_id) + '/' + str(video_id) + '_anomaly.txt', 'w')
-    for key in confs.keys():
-        f.write(str(key) + ' ' + str(confs[key]) + '\n')
+    for frame_id, conf in confs.items():
+        f.write(str(frame_id) + ' ' + str(conf) + '\n')
     f.close()
